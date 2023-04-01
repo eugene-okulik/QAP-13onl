@@ -2,5 +2,5 @@
 
 x = 345
 y = 88.5455
-equation = (x - y)/(1 + x * y)
+equation = (x - y) / (1 + x * y)
 print(f'Результат уравнения {x} − {y} / 1 + {x} * {y} равен {equation}')

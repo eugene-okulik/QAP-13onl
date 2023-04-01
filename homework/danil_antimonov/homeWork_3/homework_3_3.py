@@ -3,7 +3,7 @@
 x = 56
 y = 32.5455
 z = 57
-arithmetic_mean = (x + y + z)/3
+arithmetic_mean = (x + y + z) / 3
 print(f'Среднее арифметическое для {x}, {y} и {z} равно {arithmetic_mean}')
-geomethric_mean = (x * y * z) ** (1/3)
+geomethric_mean = (x * y * z) ** (1 / 3)
 print(f'Среднее геометрическое для {x}, {y} и {z} равно {geomethric_mean}')
