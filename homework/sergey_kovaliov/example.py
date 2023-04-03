@@ -29,7 +29,7 @@ class EntriesCount:
                 log_entries = dict ((key, value) for key, value in log_entries.items() if date_1 <= key <= date_2)
             else:
                 date = datetime.strptime(date, '%Y-%m-%d %H:%M:%S.%f')
-                log_entries = dict ((key , value) for key, value in log_entries.items() if key == date)
+                log_entries = dict ((key, value) for key, value in log_entries.items() if key == date)
         if text:
             log_entries = dict ((key, value) for key, value in log_entries.items() if text.lower() in value.lower())
         if unwanted:
