@@ -44,8 +44,8 @@ class EntriesCount:
         return log_entries
 
         def parse_entries(self, logs: list) -> dict:
-        date = None
-        entries = {}
+            date = None
+            entries = {}
         for log in logs:
             for line in log:
                 possible_date = line[:23]
