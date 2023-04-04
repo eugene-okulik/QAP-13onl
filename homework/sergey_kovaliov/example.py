@@ -57,3 +57,4 @@ class EntriesCount:
                         entries[date] += line
                     continue
         return entries
+        
