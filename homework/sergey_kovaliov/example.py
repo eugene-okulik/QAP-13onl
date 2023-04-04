@@ -4,7 +4,7 @@
 # Basically, because this is not a whole program, but only a piece of it.
 import argparse
 
-from datetime import datetim
+from datetime import datetime
 
 
 FILENAME = 'file.txt'
