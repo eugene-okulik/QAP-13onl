@@ -19,7 +19,6 @@ class EntriesCount:
             if date.startswith('..'):
                 date = datetime.strptime(date[3:], '%Y-%m-%d %H:%M:%S.%f')
                 log_entries = dict((key, value) for key, value in log_entries.items() if key <= date)
-
             elif date.endswith('..'):
                 date = datetime.strptime(date[:-3], '%Y-%m-%d %H:%M:%S.%f')
                 log_entries = dict((key, value) for key, value in log_entries.items() if key >= date)
@@ -44,17 +43,17 @@ class EntriesCount:
         return log_entries
 
         def parse_entries(self, logs: list) -> dict:
-        date = None
-        entries = {}
-        for log in logs:
-            for line in log:
-                possible_date = line[:23]
-                try:
-                    date = datetime.strptime(possible_date, '%Y-%m-%d %H:%M:%S.%f')  # 2022-01-13 12:34:20.517
-                    entries[date] = line
-                except ValueError:
-                    if date:
-                        entries[date] += line
+            date = None
+            entries = {}
+            for log in logs:
+                for line in log:
+                    possible_date = line[:23]
+                    try:
+                        date = datetime.strptime(possible_date, '%Y-%m-%d %H:%M:%S.%f')  # 2022-01-13 12:34:20.517
+                        entries[date] = line
+                    except ValueError:
+                        if date:
+                            entries[date] += line
                     continue
         return entries
         
