@@ -1,0 +1,8 @@
+text_file = open('text.txt', 'r')
+content = text_file.read()
+print(content)
+separated_text = content.split()
+print(separated_text)
+print('names: ', separated_text[::3])
+print('models: ', separated_text[1::3])
+print('prices: ', separated_text[2::3])

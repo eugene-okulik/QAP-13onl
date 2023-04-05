@@ -1,0 +1,10 @@
+my_tuple = (1, 3, 6, 7, 'text', False, 12.3, [4, 5])
+my_tuple1 = ()
+print(type(my_tuple1))
+my_tuple2 = tuple()
+first_elt = my_tuple[0]
+print(first_elt)
+print(len(my_tuple))
+print([4, 5] in my_tuple)
+my_tuple3 = (42,)
+print(type(my_tuple3))
