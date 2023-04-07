@@ -28,5 +28,3 @@ print(my_dict['str'][::3])
 
 # Вывод словаря
 print(my_dict)
-
-а
