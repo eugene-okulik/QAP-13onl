@@ -2,7 +2,9 @@
 # я может и лишнего расписал, но просто для практики пальцев и привычки писать правильно
 
 my_dict = {
-    'tuple': (1, 2, 3, 4, 5), 'list': ['6', [7], 8, 9, [10]], 'dict': {'a': 11, 'b': 12, 'c': 13, 'd': 14, 'e': 15},
+    'tuple': (1, 2, 3, 4, 5),
+    'list': ['6', [7], 8, 9, [10]],
+    'dict': {'a': 11, 'b': 12, 'c': 13, 'd': 14, 'e': 15},
     'set': {16, 17, 18, 19, '20'},
     'str': 'Mauris fringilla odio sit amet pretium ultricies. Pellentesque habitant morbi tristique'
 }
@@ -32,5 +34,5 @@ print(
     f'Все символы с индексами кратные трем: {my_dict["str"][::3]}\n'
 )
 print('ИТОГО')
-for key in my_dict:
-    print(my_dict[key])
+for key, value in my_dict.items():
+    print(key, value)
