@@ -15,9 +15,9 @@ print(my_list2)
 
 print('String' * 10)
 
-l = [1, 2, 20, 3, 10, 11, 12]
-print(sorted(l))
-print(l)
-l.sort()
-print(l)
+lll = [1, 2, 20, 3, 10, 11, 12]
+print(sorted(lll))
+print(lll)
+lll.sort()
+print(lll)
 print(max(my_list))
