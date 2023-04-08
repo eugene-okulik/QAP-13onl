@@ -11,7 +11,7 @@ my_dict = {'tuple': ([1, 2, 3], ('Jun', 'Jul', 'Aug'), 1.234, True, '=)'),
 print('Tuple elements starting from the 2nd:', my_dict['tuple'][1:])
 my_dict['list'].append('one_more')
 my_dict['list'].pop(1)
-my_dict['dict']['i am a tuple'] = True
+my_dict['dict'][('i am a tuple',)] = True
 my_dict['dict'].pop((1, 2))
 my_dict['set'].add(23)
 my_dict['set'].remove(1.234)
