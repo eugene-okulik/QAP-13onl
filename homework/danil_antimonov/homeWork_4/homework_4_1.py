@@ -28,7 +28,7 @@ print('Второй элемент вложенного списка удалё�
 
 dict_in_my_dict = my_dict['dict']
 print('Вложенный словарь до изменений:\n', dict_in_my_dict)
-dict_in_my_dict['i am a tuple'] = 67485
+dict_in_my_dict['i am a tuple'] = (67485,)
 dict_in_my_dict.pop('list')
 print('Вложенный словарь после изменений:\n', dict_in_my_dict)
 
