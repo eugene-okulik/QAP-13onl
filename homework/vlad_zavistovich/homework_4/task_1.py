@@ -16,7 +16,7 @@ print(my_dict['tuple'][1:])  # Printed all the elements from the second to the e
 my_dict['list'].append(69)  # Added new element 69 to the end of the list.
 my_dict['list'].pop(1)  # Deleted the second element from the list.
 
-my_dict['dict']['i am a tuple'] = 'hello friend'  # Added new element with key 'i am a tuple'.
+my_dict['dict'][('i am a tuple',)] = (1,)  # Added new element with key ('i am a tuple',).
 my_dict['dict'].pop('country')  # Deleted element 'country'
 
 my_dict['set'].add(91)  # Added new element to the set.
