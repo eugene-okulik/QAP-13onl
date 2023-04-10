@@ -17,6 +17,6 @@ my_dict['dict'].pop('key10')
 my_dict['set'].add(999)
 my_dict['set'].remove(15)
 
-print(my_dict['str'][:7]+'\n', my_dict['str'][41:45]+'\n', my_dict['str'][::-3])
+print(my_dict['str'][:7] + '\n', my_dict['str'][41:45] + '\n', my_dict['str'][::-3])
 
 print(my_dict)
