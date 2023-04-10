@@ -11,7 +11,7 @@ print(my_dict['tuple'][1:])
 my_dict['list'].append(101)
 my_dict['list'].pop(1)
 
-my_dict['dict']['i am tuple'] = 'tup'
+my_dict['dict'][('i am tuple',)] = (1,)
 my_dict['dict'].pop('key10')
 
 my_dict['set'].add(999)
