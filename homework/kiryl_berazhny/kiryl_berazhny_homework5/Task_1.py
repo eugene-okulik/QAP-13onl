@@ -9,4 +9,3 @@ for index in range(len(words)):
     else:
         words[index] = words[index][:-1] + 'ing' + words[index][-1]
 print(' '.join(words))
-
