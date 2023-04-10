@@ -16,7 +16,7 @@ tuple_action = my_dict['tuple'][1:]
 my_dict['list'].append(99)
 my_dict['list'].pop(1)
 
-my_dict['dict']['i am a tuple'] = 'i am a terminator'
+my_dict['dict'][('i am a tuple',)] = 'i am a terminator'
 my_dict['dict'].pop('company')
 
 my_dict['set'].add(13)
