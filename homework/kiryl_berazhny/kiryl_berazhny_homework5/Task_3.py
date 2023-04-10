@@ -8,4 +8,4 @@ for i in range(15):
 print(max(my_list))
 print(min(my_list))
 print(sum(my_list))
-print(sum(my_list)/15)
+print(sum(my_list) / 15)
