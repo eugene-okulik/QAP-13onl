@@ -8,18 +8,18 @@ my_dict = {
     'set': {16, 17, 18, 19, '20'},
     'str': 'Mauris fringilla odio sit amet pretium ultricies. Pellentesque habitant morbi tristique'
 }
-print(f'РАБОТА С КОРТЕЖЕМ\nЭлементы кортежа от второго до конца: {my_dict["tuple"][2:]}.\n')
-my_dict['list'] += [input('РАБОТА СО СПИСКОМ''\nВведите значение которое хотите добавить в список: ')]
+print(f'РАБОТА С КОРТЕЖЕМ\nЭлементы кортежа от второго до конца: {my_dict["tuple"][1:]}.\n')
+my_dict['list'].append(input('РАБОТА СО СПИСКОМ''\nВведите значение которое хотите добавить в список: '))  # += ?????
 list_index1 = my_dict['list'].pop(1)
 print(
     f"Из первоначального списка удалено значение с индексом [1], а именно: {list_index1}.\n"
     f"Добавлено значение в конец списка: {my_dict['list'][-1]}.\n"
     f"Итоговый список выглядит следующим образом: {my_dict['list']}.\n"
 )
-my_dict['dict']['i am a tuple'] = input('РАБОТА СО СЛОВАРЕМ\nДобавление ключа "i am a tuple". Введите его значение: ')
+my_dict['dict'][('i am a tuple',)] = input('РАБОТА СО СЛОВАРЕМ\nДобавление ключа i am a tuple. Введите его значение: ')
 my_dict['dict'].pop('c')
 print(
-    f'В словарь dict добавлен ключ "i am a tuple" которому передано значение "{my_dict["dict"]["i am a tuple"]}".\n'
+    f'В словарь dict добавлен ключ (i am a tuple,) которому передано значение "{my_dict["dict"][("i am a tuple",)]}".\n'
     f'Из словаря удален ключ "c".\n'
     f'Итоговый словарь выглядит следующим образом: {my_dict["dict"]}\n'
 )
