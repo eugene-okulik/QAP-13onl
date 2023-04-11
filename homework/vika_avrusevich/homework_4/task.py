@@ -26,7 +26,8 @@ my_dict['list'].append('new_element')
 del_el2 = my_dict['list'].pop(1)
 print(f"2 task(list):\ndeleted element = {del_el2}\n{my_dict['list']}\n")
 # 3
-my_dict['dict']['i am a tuple'] = 'Good Luck!'
+# my_dict['dict'][tuple('i am a tuple',)] = 'Good Luck!'
+my_dict['dict'].setdefault(tuple('i am a tuple',), 'Good Luck!')
 del_el3 = my_dict['dict'].pop('name')
 print(f"3 task(dict):\ndeleted element = {del_el3}\n{my_dict['dict']}\n")
 # 4
