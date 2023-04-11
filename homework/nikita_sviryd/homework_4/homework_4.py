@@ -18,7 +18,7 @@ my_dict['set'].add(6.3)
 my_dict['set'].discard(1.3)
 
 print(my_dict['str'][:8])
-print(my_dict['str'][len(my_dict['str'])//2-2:len(my_dict['str'])//2+2])
+print(my_dict['str'][len(my_dict['str']) // 2 - 2:len(my_dict['str']) // 2 + 2])
 print(my_dict['str'][::3])
 
 print(my_dict)
