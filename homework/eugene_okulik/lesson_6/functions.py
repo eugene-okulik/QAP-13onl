@@ -12,7 +12,7 @@ def avg(*args: int):
     """
     Function counts average value
     """
-    return sum(args)/len(args)
+    return sum(args) / len(args)
 
 
 print(avg(1, 3, 6, 5, 8, 10, 34, 45))
