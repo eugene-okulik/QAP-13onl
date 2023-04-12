@@ -8,11 +8,11 @@
 #
 # Подсказка: задание выполняется с помощью цикла while
 
-num = 9
-user_num = 0
-while user_num != num:
-    user_num = int(input('Угадай цифру -> '))
-    if user_num != num:
+i = 9
+users_i = 0
+while users_i != i:
+    users_i = int(input('Угадай цифру -> '))
+    if users_i != i:
         print('Попробуй снова)')
         continue
     else:
