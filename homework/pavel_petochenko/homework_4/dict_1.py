@@ -19,7 +19,7 @@ print(my_dict['list'])
 
 # Для ‘dict’:
 # добавьте элемент с ключом ('i am a tuple',) и любым значением,
-my_dict['dict']['i am a tuple,'] = 'and this is my destiny'
+my_dict['dict'][('i am a tuple',)] = 'and this is my destiny'
 print(my_dict['dict'])
 # удалите какой-нибудь элемент
 my_dict['dict'].pop('a')
@@ -42,3 +42,5 @@ print(str_len)
 print(my_dict['str'][43:47])
 # символы с индексами кратными трем
 print(my_dict['str'][::3])
+# в конце выведите на экран весь словарь
+print(my_dict)
