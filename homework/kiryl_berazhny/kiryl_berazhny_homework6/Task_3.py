@@ -1,18 +1,18 @@
 # Задание 3 - Простейший калькулятор
 
-def calc(a, b, c):
-    if c == 1:
-        return print(a + b)
-    elif c == 2:
-        return print(a - b)
-    elif c == 3:
-        return print(a * b)
-    elif c == 4:
-        if b == 0:
-            b = float(input('Деление на 0 невозможно, введите число неравное 0: '))
-            calc(num1, b, operation)
+def calc(first_num, second_num, oper):
+    if oper == 1:
+        return print(first_num + second_num)
+    elif oper == 2:
+        return print(first_num - second_num)
+    elif oper == 3:
+        return print(first_num * second_num)
+    elif oper == 4:
+        if second_num == 0:
+            rep_num2 = float(input('Деление на 0 невозможно, введите число неравное 0: '))
+            calc(num1, rep_num2, operation)
         else:
-            return print(f'Частное: {int(a // b)}\nОстаток: {a % b}')
+            return print(f'Частное: {int(first_num // second_num)}\nОстаток: {first_num % second_num}')
 
 
 print('Выберите операцию:\n'
