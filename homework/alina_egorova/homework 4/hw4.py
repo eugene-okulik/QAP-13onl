@@ -1,7 +1,7 @@
 my_dict = {'tuple': (1, 3, 6, 7, 'text', False, 12.3),
            'list': [1, 5, 7, 13, 'Hi', False, 13.3],
-           'dict': {'name': 'Tyrion', 'second_name': 'Lannister', 'age': [39],
-                    'name2': 'Emilia', 'second_name2': 'Clarke', 'age2': [36]
+           'dict': {'name': 'Tyrion', 'second_name': 'Lannister', 'age': 39,
+                    'name2': 'Emilia', 'second_name2': 'Clarke', 'age2': 36
                     },
            'set': {1, 5, 3, 2, 8, 9},
            'str': 'Mauris fringilla odio sit amet pretium ultricies. Pellentesque habitant morbi tristique'
@@ -23,7 +23,7 @@ print(list_in_my_dict)
 # удалите какой-нибудь элемент
 
 dict_in_my_dict = my_dict['dict']
-dict_in_my_dict1 = dict_in_my_dict['i am a tuple'] = '15'
+dict_in_my_dict1 = dict_in_my_dict[('i am a tuple',)] = (15,)
 print(dict_in_my_dict)
 dict_in_my_dict2 = dict_in_my_dict.pop('name')
 print(dict_in_my_dict)
