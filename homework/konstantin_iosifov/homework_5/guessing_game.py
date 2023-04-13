@@ -1,5 +1,4 @@
 user_answer = int(input("Guess the number\n"))
-
 i = 9
 
 while True:
@@ -9,9 +8,3 @@ while True:
     else:
         print("Wrong! Try again")
         user_answer = int(input("Guess the number\n"))
-
-
-
-
-
-
