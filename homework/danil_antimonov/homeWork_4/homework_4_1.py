@@ -3,7 +3,8 @@
 
 my_dict = {'tuple': (1, 3, 6, 7, 'text', False, 12.3), 'list': [1, 2, 3, 4, 5],
            'dict': {'list': [213, 4345, 45645], 'name': 'George'},
-           'set': {'text1', 'text2', 1, 3, 6, 7, 'text', False, 12.3}, 'str': 'Wery_long_string'}
+           'set': {'text1', 'text2', 1, 3, 6, 7, 'text', False, 12.3},
+           'str': 'Mauris fringilla odio sit amet pretium ultricies. Pellentesque habitant morbi tristique'}
 
 # Для того, что хранится под ключом ‘tuple’:
 # выведите на экран все элементы начиная со второго и до конца
@@ -51,6 +52,6 @@ print(set_in_my_dict.pop())
 str_in_my_dict = my_dict['str']
 print('Первые восемь символов строки:\n', str_in_my_dict[:8])
 print('Длина строки:\n', len(str_in_my_dict))
-print('Четыре символа из центра строки:\n', str_in_my_dict[6:10])
+print('Четыре символа из центра строки:\n', str_in_my_dict[42:46])
 print('Символы с индексами кратными трем:\n', str_in_my_dict[::3])
-print('Изначальный словарь:\n', my_dict)
+print('Весь словарь:\n', my_dict)
