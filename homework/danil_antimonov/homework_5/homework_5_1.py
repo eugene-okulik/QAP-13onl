@@ -6,14 +6,15 @@ my_text = 'Etiam tincidunt neque erat, quis molestie enim imperdiet vel. Integer
           'facilisis vitae semper at, dignissim vitae libero'
 my_list = my_text.split()
 print(my_list)
-
+my_newlist = []
 for word in my_list:
     if ',' in word:
         word = word.replace(",", "ing,")
-        print(word, end=' ')
+        my_newlist.append(word)
     elif '.' in word:
         word = word.replace(".", "ing.")
-        print(word, end=' ')
+        my_newlist.append(word)
     else:
         word = f'{word}ing'
-        print(word, end=' ')
+        my_newlist.append(word)
+print(' '.join(my_newlist))
