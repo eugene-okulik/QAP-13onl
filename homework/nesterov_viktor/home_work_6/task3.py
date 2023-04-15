@@ -1,20 +1,24 @@
 def add(x, y):
     return x + y
 
+
 def subtract(x, y):
     return x - y
 
+
 def multiply(x, y):
     return x * y
+
 
 def divide(x, y):
     if y == 0:
         print("Ошибка: Деление на ноль!")
         return None
     else:
-        div = x // y
-        mod = x % y
-        return div, mod
+        div_num = x // y
+        mod_num = x % y
+        return div_num, mod_num
+
 
 print("Выберите операцию:")
 print("1. Сложение")
