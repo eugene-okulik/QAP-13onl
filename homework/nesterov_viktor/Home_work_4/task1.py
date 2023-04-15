@@ -7,7 +7,7 @@ my_dict = {
 }
 
 # Для tuple
-print(my_dict['tuple'][1 : ])
+print(my_dict['tuple'][1:])
 
 # Для list
 my_dict['list'].append(6)
@@ -22,9 +22,9 @@ my_dict['set'].add(6)
 my_dict['set'].discard(2)
 
 # Для str
-print(my_dict['str'][0 : 8])
+print(my_dict['str'][0: 8])
 print(my_dict['str'][len(my_dict['str']) // 2 - 2:len(my_dict['str']) // 2 + 2])
-print(my_dict['str'][ :: 3])
+print(my_dict['str'][:: 3])
 
 # Вывод словаря
 print(my_dict)
