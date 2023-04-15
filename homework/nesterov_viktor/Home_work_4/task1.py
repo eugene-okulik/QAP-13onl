@@ -7,7 +7,7 @@ my_dict = {
 }
 
 # Для tuple
-print(my_dict['tuple'][1:])
+print(my_dict['tuple'][1 : ])
 
 # Для list
 my_dict['list'].append(6)
