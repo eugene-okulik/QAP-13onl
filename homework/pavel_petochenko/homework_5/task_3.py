@@ -4,12 +4,12 @@
 
 import random
 
-list = []
+list_1 = []
 num = [random.random()]
 for number in range(15):
-    list.append(random.random())
-print(list)
-print(max(list))
-print(min(list))
-print(sum(list))
-print(sum(list) / len(list))
+    list_1.append(random.random())
+print(list_1)
+print(max(list_1))
+print(min(list_1))
+print(sum(list_1))
+print(sum(list_1) / len(list_1))
