@@ -11,7 +11,7 @@ def check_numbers(numbers):
     if out_of_range:
         print(
             'Следующие числа будут отфильтрованы, потому что они меньше 0 или больше 19:' ', '.join(out_of_range)
-            )
+        )
     return numbers
 
 
