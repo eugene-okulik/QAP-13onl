@@ -1,4 +1,4 @@
-#  random.random() 15 раз
+#  random.random() выполняется заданное количество раз.
 
 import random
 
