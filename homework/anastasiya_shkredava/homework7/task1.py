@@ -59,8 +59,8 @@ def letter_case(user_case, alphabet, letter_position):
     return letter
 
 
-user_language = int(input('Доступные языки:\n1. English\n2. Русский\n'
-                          'Введите цифру, соответствующую языку, который вы хотите использовать для шифра:\n'))
+languages = 'Доступные языки:\n1. English\n2. Русский\n'
+user_language = int(input(f'{languages}. Введите цифру языка из списка, который вы хотите использовать для шифра:\n'))
 
 while user_language > 2 or user_language < 1:
     user_language = int(input('Введенное число не соответствует какому-либо языку из списка. Попробуйте снова\n'))
