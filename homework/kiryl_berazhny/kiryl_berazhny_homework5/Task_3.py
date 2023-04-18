@@ -2,8 +2,9 @@
 
 import random
 
+num = int(input('Enter number: '))
 my_list = list()
-for i in range(15):
+for i in range(num):
     my_list.append(random.random())
 print(max(my_list))
 print(min(my_list))
