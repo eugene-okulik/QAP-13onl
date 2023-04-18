@@ -1,6 +1,7 @@
 # Задание 2 - "FuzzBuzz"
 
-for i in range(1, 101):
+LIMIT = 101
+for i in range(1, LIMIT):
     if i % 3 == 0 and i % 5 != 0:
         print('Fuzz')
     elif i % 5 == 0 and i % 3 != 0:
