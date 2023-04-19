@@ -29,7 +29,7 @@ def calc(first_num, second_num, operation):
     if operation == '/':
         return print('The second number is greater, dividing the first number by the second:', first_num / second_num)
     if operation == '*':
-        return print('One of the numbers is negative - multiplication operation:', first_num * second_num)
+        return print('One of the numbers is negative, multiplication operation:', first_num * second_num)
 
 
 num1, num2 = [int(i) for i in input('Enter two numbers separated by a space: ').split()]
