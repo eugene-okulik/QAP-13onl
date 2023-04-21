@@ -1,19 +1,33 @@
-# теперь у меня глобальная проблема не только с циклами, но и с функциями
+operation = input('''
+Выберите операцию:
+1. Сложение
+2. Вычитание
+3. Умножение
+4. Деление
+Введите номер пункта меню: 
+''')
+number_1 = int(input('Введите первое число: '))
+number_2 = int(input('Введите второе число: '))
 
 
-print('Выберите операцию:')
-print(' 1. Сложение\n', '2. Вычитание\n', '3. Умножение\n', '4. Деление')
-operation = int(input('Введите номер пункта меню: '))
-a = int(input('Введите первое число: '))
-b = int(input('Введите второе число: '))
-if operation == 1:
-    print(a+b)
-elif operation == 2:
-    print(a-b)
-elif operation == 3:
-    print(a*b)
-elif operation == 4:
-    if b == 0:
-        print('Делить на ноль нельзя')
+def calculate():
+    if operation == '1':
+        print('{} + {} = '.format(number_1, number_2))
+        print(number_1 + number_2)
+    elif operation == '2':
+        print('{} - {} = '.format(number_1, number_2))
+        print(number_1 - number_2)
+    elif operation == '3':
+        print('{} * {} = '.format(number_1, number_2))
+        print(number_1 * number_2)
+    elif operation == '4':
+        if number_2 == 0:
+            print('Делить на ноль нельзя')
+        else:
+            print('{} / {} = '.format(number_1, number_2))
+            print('Частное:', number_1 // number_2, ';', 'остаток:', number_1 % number_2)
     else:
-        print('Частное:', a / b, ',', 'Остаток:', a % b)
+        print('Такой операции нет')
+
+
+calculate()
