@@ -10,7 +10,7 @@ def division(a, b):
     if b == 0:
         return print('Деление на 0 запрещено')
     else:
-        return print(f'Частное {a} и {b} = ', a / b)
+        return print(f'Частное {a} и {b} = ', int(a / b), '\nОстаток: ', a % b)
 
 
 def addition(a, b):
@@ -27,8 +27,8 @@ print('Эта программа может выполнять\n' +
       '3. Сложение\n' +
       '4. Вычитание')
 selected_action = int(input('Введите номер действия которое хотите выполнить:\n'))
-a = int(input('Введите a:\n'))
-b = int(input('Введите b:\n'))
+a = int(input('Введите первое число:\n'))
+b = int(input('Введите второе число:\n'))
 if selected_action == 1:
     multiplication(a, b)
 elif selected_action == 2:

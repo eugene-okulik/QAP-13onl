@@ -13,12 +13,5 @@ PRICE_LIST = '''тетрадь 50р
 
 my_list = PRICE_LIST.split('\n')
 print(my_list)
-# for item in my_list:
-#     key = item.split()[0]
-#     value = int(item.split()[1][:-1])
-#     print(key, type(value))
-
-# my_dict2 = {k: v for k, v in my_dict.items() if isinstance(v, int)}
-
 price_dict = {item.split()[0]: int(item.split()[1][:-1]) for item in my_list}
 print(price_dict)
