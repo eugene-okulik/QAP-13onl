@@ -9,5 +9,5 @@ x = PRICE_LIST.split()
 
 dict1 = {x[i]: x[i + 1][0:-1] for i in range(0, len(x), 2)}
 
-my_dict2 = {k:  int(v) for k, v in dict1.items()}
+my_dict2 = {k: int(v) for k, v in dict1.items()}
 print(my_dict2)
