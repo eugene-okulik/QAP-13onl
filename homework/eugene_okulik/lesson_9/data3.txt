@@ -1,0 +1,1 @@
+{"Country": "Poland", "avg_temp": 15, "min_temp": 2}
