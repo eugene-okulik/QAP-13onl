@@ -21,21 +21,20 @@ class Books:
     def read_file(self):
 
         with open(self.library) as book_file:
-            library_book = list()
-            for book in book_file:
-                library_book.append(json.loads(book))
+            library_book = [json.loads(book) for book in book_file]
             return library_book
 
-    def book_number(self):
+    def book_number(self): ###############################
 
         print('Список книг:')
         for number in range(len(self.book)):
             if "Класс" in self.book[number]:
-                print(f'{number + 1}. {self.book[number]["Название книги"]}, '
-                      f'{self.book[number]["Автор"]}, {self.book[number]["Класс"]} класс')
+                print(
+                    f'{number + 1}. {self.book[number]["Название книги"]}, '
+                    f'{self.book[number]["Автор"]}, {self.book[number]["Класс"]} класс'
+                )
             else:
-                print(f'{number + 1}. {self.book[number]["Название книги"]}, '
-                      f'{self.book[number]["Автор"]}')
+                print(f'{number + 1}. {self.book[number]["Название книги"]}, {self.book[number]["Автор"]}')
         print('\nДля более детальной информации о книге необходимо ввести ее номер.')
         while True:
             num_book = int(input('Введите номер интересующей книги: '))
