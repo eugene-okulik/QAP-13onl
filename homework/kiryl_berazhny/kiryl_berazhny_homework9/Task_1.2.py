@@ -36,7 +36,7 @@ class Books:
             else:
                 print(f'{number + 1}. {self.book[number]["Название книги"]}, '
                       f'{self.book[number]["Автор"]}')
-        print(f'\nДля более детальной информации о книге необходимо ввести ее номер.')
+        print('\nДля более детальной информации о книге необходимо ввести ее номер.')
         while True:
             num_book = int(input('Введите номер интересующей книги: '))
             if 0 < num_book <= len(self.book):
