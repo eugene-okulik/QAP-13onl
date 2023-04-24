@@ -24,7 +24,7 @@ class Books:
             library_book = [json.loads(book) for book in book_file]
             return library_book
 
-    def book_number(self): ###############################
+    def book_number(self):
 
         print('Список книг:')
         for number in range(len(self.book)):
