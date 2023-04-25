@@ -1,4 +1,10 @@
-# Библиотека (работа с классами)
+# Библиотека (работа с классами).
+# Есть пару вопросов - 1. функция book_number (строка 34), пришлось ее сильно расписать, так как не разобрался как ее
+# вызвать внутри самой себя (это помогло бы в два раза сократить код самой функции).
+# По поиску тоже есть нюансы, а именно - я поставил порог символов 4 штуки. А если название книги из одной буквы,
+# то получается нужно добавить поиск еще по автору книги, но уже было лень расписывать. И еще плюс поиск не умеет искать
+# книги, название которых состоят только из цифр.
+# В целом задание класс, спасибо
 
 import json
 
@@ -11,6 +17,7 @@ class Books:
 
         self.library = library
         self.book = self.read_file()
+        self.search_list = list()
         self.book_num = self.book_number()
         self.name_book = self.book[self.book_num]['Название книги']
         self.author_book = self.book[self.book_num]['Автор']
@@ -18,13 +25,13 @@ class Books:
         self.isbn = self.book[self.book_num]['ISBN']
         self.status = self.status_book()
 
-    def read_file(self):
+    def read_file(self):  # чтение файла (получится список)
 
         with open(self.library) as book_file:
             library_book = [json.loads(book) for book in book_file]
             return library_book
 
-    def book_number(self):
+    def book_number(self):  # отвечает за выбор индекса книги, которую выбираем из прочтенного файла
 
         print('Список книг:')
         for number in range(len(self.book)):
@@ -35,15 +42,51 @@ class Books:
                 )
             else:
                 print(f'{number + 1}. {self.book[number]["Название книги"]}, {self.book[number]["Автор"]}')
-        print('\nДля более детальной информации о книге необходимо ввести ее номер.')
+        print('\nВоспользуйтесь поиском или выберите необходимую книгу')
         while True:
-            num_book = int(input('Введите номер интересующей книги: '))
-            if 0 < num_book <= len(self.book):
-                return num_book - 1
+            num_book = input('Введите номер интересующей книги или введите название книги (не менее 4 символов): ')
+            if num_book.isdigit() is True:
+                num_book = int(num_book)
+                if 0 < num_book <= len(self.book):
+                    return num_book - 1
+                else:
+                    print(f'В библиотеке {len(self.book)} книг.')
             else:
-                print(f'В библиотеке {len(self.book)} книг.')
+                while True:
+                    while len(num_book) < 4:
+                        num_book = input('Введите не менее 4 символов для поиска книги: ')
+                    for name in self.book:
+                        if num_book.lower() in name["Название книги"].lower():
+                            self.search_list.append(name)
+                    if self.search_list == list():
+                        num_book = input(
+                            'К сожалению такой книги нету, попробуйте заново (введите не менее 4 символов):'
+                        )
+                    elif len(self.search_list) == 1:
+                        return self.book.index(self.search_list[0])
+                    else:
+                        print('\nПо вашему запросу доступны следующие книги:')
+                        for index_book in range(len(self.search_list)):
+                            if "Класс" in self.search_list[index_book]:
+                                print(
+                                    f'{index_book + 1}. {self.search_list[index_book]["Название книги"]}, '
+                                    f'{self.search_list[index_book]["Автор"]}, {self.search_list[index_book]["Класс"]} '
+                                    f'класс'
+                                )
+                            else:
+                                print(
+                                    f'{index_book + 1}. {self.search_list[index_book]["Название книги"]}, '
+                                    f'{self.search_list[index_book]["Автор"]}'
+                                )
+                        while True:
+                            num_list = int(input('Введите номер интересующей книги : '))
+                            if 0 < num_list <= len(self.search_list):
+                                return self.book.index(self.search_list[num_list - 1])
+                            else:
 
-    def status_book(self):
+                                print(f'Поиск дал книг: {len(self.search_list)}.')
+
+    def status_book(self):  # это необходимо для вывода результата с артикулом "Зарезервирована"
 
         if self.book[self.book_num]['Статус'] == 'Зарезервирована':
             return self.book[self.book_num]['Статус']
@@ -73,9 +116,8 @@ while True:
         'В библиотеке имеются:'
         '\n1. Художественная литература.'
         '\n2. Школьные учебники.'
-        '\nВыберите раздел (введите номер раздела): '
     )
-    selection = int(input())
+    selection = int(input('Выберите раздел (введите номер раздела): '))
     if selection == 1:
         main_library = Books('library.txt')
         print(
@@ -85,7 +127,7 @@ while True:
     elif selection == 2:
         School_books = SchoolTextbooks('school_library.txt')
         print(
-            f'Название: {School_books.name_book}, Автор: {School_books.author_book}, '
+            f'\nНазвание: {School_books.name_book}, Автор: {School_books.author_book}, '
             f'страниц: {School_books.num_pages}, предмет: {School_books.disc}, '
             f'класс: {School_books.class_number} {School_books.status}'
         )
