@@ -17,7 +17,6 @@ class Books:
 
         self.library = library
         self.book = self.read_file()
-        self.search_list = list()
         self.book_num = self.book_number()
         self.name_book = self.book[self.book_num]['Название книги']
         self.author_book = self.book[self.book_num]['Автор']
@@ -55,36 +54,36 @@ class Books:
                 while True:
                     while len(num_book) < 4:
                         num_book = input('Введите не менее 4 символов для поиска книги: ')
+                    search_list = list()
                     for name in self.book:
                         if num_book.lower() in name["Название книги"].lower():
-                            self.search_list.append(name)
-                    if self.search_list == list():
+                            search_list.append(name)
+                    if search_list == list():
                         num_book = input(
                             'К сожалению такой книги нету, попробуйте заново (введите не менее 4 символов):'
                         )
-                    elif len(self.search_list) == 1:
-                        return self.book.index(self.search_list[0])
+                    elif len(search_list) == 1:
+                        return self.book.index(search_list[0])
                     else:
                         print('\nПо вашему запросу доступны следующие книги:')
-                        for index_book in range(len(self.search_list)):
-                            if "Класс" in self.search_list[index_book]:
+                        for index_book in range(len(search_list)):
+                            if "Класс" in search_list[index_book]:
                                 print(
-                                    f'{index_book + 1}. {self.search_list[index_book]["Название книги"]}, '
-                                    f'{self.search_list[index_book]["Автор"]}, {self.search_list[index_book]["Класс"]} '
+                                    f'{index_book + 1}. {search_list[index_book]["Название книги"]}, '
+                                    f'{search_list[index_book]["Автор"]}, {search_list[index_book]["Класс"]} '
                                     f'класс'
                                 )
                             else:
                                 print(
-                                    f'{index_book + 1}. {self.search_list[index_book]["Название книги"]}, '
-                                    f'{self.search_list[index_book]["Автор"]}'
+                                    f'{index_book + 1}. {search_list[index_book]["Название книги"]}, '
+                                    f'{search_list[index_book]["Автор"]}'
                                 )
                         while True:
                             num_list = int(input('Введите номер интересующей книги : '))
-                            if 0 < num_list <= len(self.search_list):
-                                return self.book.index(self.search_list[num_list - 1])
+                            if 0 < num_list <= len(search_list):
+                                return self.book.index(search_list[num_list - 1])
                             else:
-
-                                print(f'Поиск дал книг: {len(self.search_list)}.')
+                                print(f'Поиск дал книг: {len(search_list)}.')
 
     def status_book(self):  # это необходимо для вывода результата с артикулом "Зарезервирована"
 
