@@ -1,4 +1,5 @@
 a = 6
+print('Попробуйте угадать число:')
 while True:
     b = float(input())
     if b != a:
