@@ -2,6 +2,11 @@
 # если первое больше второго, то происходит вычитание второго из певрого
 # если второе больше первого - деление первого на второе
 # если одно из чисел отрицательное - умножение
+
+a = int(input('Введите первое число:\n'))
+b = int(input('Введите второе число:\n'))
+
+
 def selector_operation(function_to_decorate):
     def wrapper(arg1, arg2):
         if arg1 == arg2:
@@ -13,6 +18,7 @@ def selector_operation(function_to_decorate):
         elif arg1 < 0 or arg2 < 0:
             arg3 = '*'
         return function_to_decorate(arg1, arg2, arg3)
+
     return wrapper
 
 
@@ -28,4 +34,4 @@ def calc(first: int, second: int, operation):
         return print(first * second)
 
 
-calc(4, 3)
+calc(a, b)
