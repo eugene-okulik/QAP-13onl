@@ -14,6 +14,7 @@ user_numb = list(map(
     int,
     input('\nВведите несколько чисел (не более 100 шт) от 0 до 19 включительно через пробел: ').split())
 )
+
 if len(user_numb) > 100:
     print('\nВы ввели больше 100 чисел. Попробуйте снова.')
 elif not all(0 <= n <= 19 for n in user_numb):

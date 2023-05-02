@@ -14,7 +14,6 @@
 def encypt_func(text, step):
     alpha = 'abcdefghijklmnopqrstuvwxyz'
     result = ''
-
     for i in range(len(text)):
         if text[i].isalnum():
             result += alpha[(alpha.find(text[i]) + step) % (len(alpha))]
