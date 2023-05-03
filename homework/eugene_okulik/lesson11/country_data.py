@@ -11,6 +11,6 @@ class CountryData:
     def read_file(self):
         with open(self.filename, 'r') as data_file:
             return data_file.read()
-        
+
 
 var = 1
