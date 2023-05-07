@@ -7,42 +7,38 @@
 # Напишите две функции - encode и decode принимающие как параметр строку и число - сдвиг.
 # Знаки препинания должны сохраниться.
 
-print('Выберите операцию: \n'
-      '1. Зашифровать \n'
-      '2. Расшифровать \n')
-enc_dec = input('Введите номер операции: ')
-alphabet = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'
-step = int(input('Введите шаг шифровки: '))
-message = input("Введите текст для шифровки: ")
-cipher = ''
-
-
-def encode():
-    global cipher
-    for letter in message:
-        letter_position = alphabet.find(letter)
-        new_letter = letter_position + step
+def encode(local_encoded_message, local_encoding_step):
+    alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    cipher = ''
+    for letter in local_encoded_message:
         if letter in alphabet:
-            cipher = cipher + alphabet[new_letter]
+            letter_position = alphabet.index(letter)
+            new_letter_position = (letter_position + local_encoding_step) % len(alphabet)
+            cipher += alphabet[new_letter_position]
         else:
-            cipher = cipher + letter
-    print(cipher)
+            cipher += letter
+    return cipher
 
 
-def decode():
-    global cipher
-    for letter in message:
-        letter_position = alphabet.find(letter)
-        new_letter = letter_position - step
+def decode(local_encoded_cipher, local_decoding_step):
+    alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    message = ''
+    for letter in local_encoded_cipher:
         if letter in alphabet:
-            cipher = cipher + alphabet[new_letter]
+            letter_position = alphabet.index(letter)
+            new_letter_position = (letter_position - local_decoding_step) % len(alphabet)
+            message += alphabet[new_letter_position]
         else:
-            cipher = cipher + letter
-    print(cipher)
+            message += letter
+    return message
 
 
-match enc_dec:
-    case '1':
-        encode()
-    case '2':
-        decode()
+encoded_message = input("Введите текст для шифровки: ")
+encoding_step = int(input("Введите шаг шифровки: "))
+
+encrypted_message = encode(encoded_message, encoding_step)
+print("Зашифрованный текст: ", encrypted_message)
+
+decoding_step = encoding_step
+decrypted_message = decode(encrypted_message, decoding_step)
+print("Расшифрованный текст: ", decrypted_message)

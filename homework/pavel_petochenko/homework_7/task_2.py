@@ -10,21 +10,22 @@ number_names = {
     10: 'ten', 11: 'eleven', 12: 'twelve',
     13: 'thirteen', 14: 'fourteen', 15: 'fifteen', 16: 'sixteen', 17: 'seventeen', 18: 'eighteen', 19: 'nineteen'
 }
+name_numbers = {v: k for k, v in number_names.items()}
 
 
-def convert_to_words(numbers):
-    if not all(0 <= n <= 19 for n in numbers):
+def convert_to_words(numbers_list):
+    if not all(0 <= n <= 19 for n in numbers_list):
         raise ValueError("Введенные числа должны быть от 0 до 19 включительно.")
-    if len(numbers) > 100:
+    if len(numbers_list) > 100:
         raise ValueError("Максимально допустимое количество введенных цифр - 100.")
-    num_words = [number_names[n] for n in numbers]
-    return sorted(num_words)
+    num_words = [name_numbers[name] for name in sorted(number_names[n] for n in numbers_list)]
+    return num_words
 
 
 try:
     num = input('Введите числа от 0 до 19: ').split()
     num = [int(n) for n in num]
-    words = convert_to_words(num)
-    print(" ".join(words))
+    numbers = convert_to_words(num)
+    print(" ".join(str(n) for n in numbers))
 except ValueError as e:
     print("Error:", e)
