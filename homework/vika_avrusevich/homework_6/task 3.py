@@ -19,17 +19,17 @@
 # Частное: 3, Остаток: 3
 # Можете сделать все в одной функции, можете разделить на разные.
 
-def calc(user_choice, first_number, second_number):
-    if user_choice == 1:
+def calc(sign, first_number, second_number):
+    if sign == 1:
         return f'\nСумма чисел: {first_number + second_number}.'
-    if user_choice == 2:
+    if sign == 2:
         return f'\nРазность чисел: {first_number - second_number}.'
-    if user_choice == 3:
+    if sign == 3:
         return f'\nПроизведение чисел: {first_number * second_number}.'
-    if user_choice == 4:
+    if sign == 4:
         if second_number == 0:
             other_number = int(input('\nНа 0, к сожалению, делить нельзя. Введите другое число: '))
-            calc(other_number, user_choice, first_number)
+            return calc(sign, first_number, other_number)
         else:
             return f'\nЧастное чисел: {first_number // second_number}, ' \
                    f'и остаток от него: {first_number % second_number}.'
@@ -41,10 +41,10 @@ print('Выберите операцию:\n'
       '3. Умножение\n'
       '4. Деление\n')
 
-sign = int(input('Введите номер пункта меню -> '))
-while sign < 1 or sign > 4:
-    sign = int(input('Такой операции нет. Выберите другую операцию -> '))
+user_choice = int(input('Введите номер пункта меню -> '))
+while user_choice < 1 or user_choice > 4:
+    user_choice = int(input('Такой операции нет. Выберите другую операцию -> '))
 
 first_user_number = int(input('Введите первое число -> '))
 second_user_number = int(input('Введите второе число-> '))
-print(calc(sign, first_user_number, second_user_number))
+print(calc(user_choice, first_user_number, second_user_number))

@@ -24,11 +24,6 @@ PRICE_LIST = '''тетрадь 50р
 пенал 300р
 рюкзак 500р'''
 
-PRICE_LIST = PRICE_LIST.split('\n')
-for i in range(len(PRICE_LIST)):
-    PRICE_LIST[i] = PRICE_LIST[i].split()
+price_dict = {name: int(price[:-1]) for name, price in [line.split() for line in PRICE_LIST.split('\n')]}
 
-DICT_PRICE_LIST = {k: int(v[:-1]) for k, v in PRICE_LIST}
-
-print(DICT_PRICE_LIST)
-print(type(DICT_PRICE_LIST))
+print(price_dict)
