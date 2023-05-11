@@ -28,4 +28,3 @@ user_step = int(input('Введите шаг шифровки      : '))
 print(f'\nИсходный текст      : {user_text}'
       f'\nШаг                 : {str(user_step)}'
       f'\nЗашифрованный текст : {encypt_func(user_text, user_step)}')
-
