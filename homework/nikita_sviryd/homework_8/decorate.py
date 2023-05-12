@@ -11,6 +11,7 @@ def operation_selector(func):
         return func(num_1, num_2, operation)
     return wrapper
 
+
 @operation_selector
 def calc(one, two, operation):
     if operation == '+':
