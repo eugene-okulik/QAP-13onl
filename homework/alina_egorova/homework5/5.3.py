@@ -10,4 +10,4 @@ for i in range(15):
 print(max(random_list))  # максимальное из сгенеренных рандомов
 print(min(random_list))  # минимальное из сгенеренных рандомов
 print(sum(random_list))  # сумма из сгенеренных рандомов
-print((sum(random_list)) / 15)  # среднее арифметическое
+print((sum(random_list)) / len(random_list))  # среднее арифметическое
