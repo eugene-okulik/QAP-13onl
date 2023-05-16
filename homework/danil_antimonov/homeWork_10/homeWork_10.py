@@ -42,8 +42,8 @@ class Bouquet:
         print(len(self.list_of_flowers))
 
     def lifetime(self):
-        lifetime_bouquet = sum(list(map(lambda flower: flower.lifetime, self.list_of_flowers))) / \
-                           len(self.list_of_flowers)
+        lifetime_bouquet = sum(list(map(lambda flower: flower.lifetime, self.list_of_flowers))) / len(
+            self.list_of_flowers)
         return f'Bouquet lifetime is {round(lifetime_bouquet)} hours'
 
     def pricesort(self):
