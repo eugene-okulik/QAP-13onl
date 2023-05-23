@@ -12,7 +12,7 @@ Repeat previous search in reverse direction: N
 
 /dev/null: Символьные устройства crw-rw-rw-
 /dev/zero: Символьные устройства crw-rw-rw-
-/dev/sda:
+/dev/sda: Гугл говорит, что это блочные устройства b
 /dev/tty: Символьные устройства crw-rw-rw-
 /root: Каталоги drwxr-xr-x
 /etc/passwd: Обычные файлы -rw-r--r--
