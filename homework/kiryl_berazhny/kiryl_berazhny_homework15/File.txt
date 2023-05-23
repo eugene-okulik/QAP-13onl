@@ -1,0 +1,24 @@
+Задание 2
+
+ g  <  ESC-<       *  Go to first line in file (or line N).
+ G  >  ESC->       *  Go to last line in file (or line N).
+ f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+ e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+ y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+ /pattern          *  Search forward for (N-th) matching line.
+ ?pattern          *  Search backward for (N-th) matching line.
+ n                 *  Repeat previous search (for N-th occurrence).
+ N                 *  Repeat previous search in reverse direction.
+
+Задание 3
+
+/dev/null - формат "с" - символьное устройство
+/dev/zero - формат "с" - символьное устройство
+/dev/sda - как я понял это диск (есть sda, sdb), его в списке нету. Но учитывая, что это диск, то скорее это блочное
+устройство (так как оно должно иметь буфер для запросов - чтение и запись).
+/dev/tty - формат "с" - символьное устройство
+/root - формат "d" - директория
+/etc/passwd - формат "-" - файл
+/proc/mounts формат "l" - ссылка
+/bin/ls - формат "-" - файл
+/bin/zcat - формат "-" - файл
