@@ -1,0 +1,85 @@
+/dev/null - File: /dev/null
+  Size: 0               Blocks: 0          IO Block: 4096   character special file
+Device: 6h/6d   Inode: 6           Links: 1     Device type: 1,3
+Access: (0666/crw-rw-rw-)  Uid: (    0/    root)   Gid: (    0/    root)
+  File: testik.txt
+  Size: 62              Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 259117      Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1047/ damon53)   Gid: ( 1046/   qap13)
+
+
+/dev/zero - File: /dev/zero
+  Size: 0               Blocks: 0          IO Block: 4096   character special file
+Device: 6h/6d   Inode: 8           Links: 1     Device type: 1,5
+Access: (0666/crw-rw-rw-)  Uid: (    0/    root)   Gid: (    0/    root)
+  File: testik.txt
+  Size: 62              Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 259117      Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1047/ damon53)   Gid: ( 1046/   qap13)
+
+
+/dev/sda - stat: cannot stat '/dev/sda': No such file or directory
+  File: testik.txt
+  Size: 62              Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 259117      Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1047/ damon53)   Gid: ( 1046/   qap13)
+
+
+/dev/tty -  File: /dev/tty
+  Size: 0               Blocks: 0          IO Block: 4096   character special file
+Device: 6h/6d   Inode: 13          Links: 1     Device type: 5,0
+Access: (0666/crw-rw-rw-)  Uid: (    0/    root)   Gid: (    5/     tty)
+  File: testik.txt
+  Size: 62              Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 259117      Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1047/ damon53)   Gid: ( 1046/   qap13)
+
+
+/root -  File: /root
+  Size: 4096            Blocks: 8          IO Block: 4096   directory
+Device: fc01h/64513d    Inode: 1536        Links: 8
+Access: (0700/drwx------)  Uid: (    0/    root)   Gid: (    0/    root)
+  File: testik.txt
+  Size: 62              Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 259117      Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1047/ damon53)   Gid: ( 1046/   qap13)
+
+
+/etc/passwd -  File: /etc/passwd
+  Size: 4158            Blocks: 16         IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 2688        Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+  File: testik.txt
+  Size: 62              Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 259117      Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1047/ damon53)   Gid: ( 1046/   qap13)
+
+
+/proc/mounts - File: /proc/mounts -> self/mounts
+  Size: 11              Blocks: 0          IO Block: 1024   symbolic link
+Device: 5h/5d   Inode: 4026531843  Links: 1
+Access: (0777/lrwxrwxrwx)  Uid: (    0/    root)   Gid: (    0/    root)
+  File: testik.txt
+  Size: 62              Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 259117      Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1047/ damon53)   Gid: ( 1046/   qap13)
+
+
+/bin/ls -  File: /bin/ls
+  Size: 142144          Blocks: 280        IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 1590        Links: 1
+Access: (0755/-rwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+  File: testik.txt
+  Size: 62              Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 259117      Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1047/ damon53)   Gid: ( 1046/   qap13)
+
+
+/bin/zcat - File: /bin/zcat
+  Size: 1984            Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 7359        Links: 1
+Access: (0755/-rwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+  File: testik.txt
+  Size: 62              Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 259117      Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1047/ damon53)   Gid: ( 1046/   qap13)

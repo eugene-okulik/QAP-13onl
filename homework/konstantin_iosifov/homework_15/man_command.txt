@@ -1,0 +1,10 @@
+
+Go to first line in file: "g"
+Go to last line in file: "G"
+Forward one window: "f"
+Forward one line: "j" или прокрутить колесико мыши вниз
+Backward one line: "k" или прокрутить колесико мыши вверх
+Search forward for matching line: "/" ввести искомую фразу, затем нажать "Enter"
+Search backward for matching line: "?" ввести искомую фразу, затем нажать "Enter"
+Repeat previous search: "n"
+Repeat previous search in reverse direction: "N"
