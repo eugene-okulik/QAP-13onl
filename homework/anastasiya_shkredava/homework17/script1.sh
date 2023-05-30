@@ -12,6 +12,6 @@ then
 echo "Все-равно установим"
 else
 echo "А такого варианта ответа нет =)"
-if
+fi
 break
 done

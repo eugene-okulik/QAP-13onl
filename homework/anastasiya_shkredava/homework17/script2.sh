@@ -13,7 +13,7 @@ echo "ok"
 elif [[ ${#word} -gt 5 ]]
 then
 echo "слово слишком длинное"
-elif [[ ${#word} -eq 0 ]]
+elif [[ -z $word ]]
 then
 echo "You did not enter the word"
 fi
