@@ -1,7 +1,7 @@
 # This app is designed to help you practice formatting python code.
 #
-# This program should not start, and if it suddenly starts and works, then some kind of magic has happened.
-# Basically, because this is not a whole program, but only a piece of it.
+# This 11.1 should not start, and if it suddenly starts and works, then some kind of magic has happened.
+# Basically, because this is not a whole 11.1, but only a piece of it.
 
 import argparse
 

@@ -1,0 +1,35 @@
+Задание №2
+При открытии программы помощи "man" нам доступно 2 действия: выход с помощью "q" и помощь с "h".
+Воспользуйтесь этой помощью и узнайте, как обращаться с программой man. В результате, напишите команды, с помощью
+которых можно выполнять эти действия:
+    Go to first line in file: g
+    Go to last line in file: G
+    Forward one window: f  Ctrl-F  Ctrl-V  SPACE  *  Forward  one window (or N lines).
+    Forward one line: e  Ctrl-E  j  Ctrl-N  CR  *  Forward  one line   (or N lines).
+    Backward one line: y  Ctrl-Y  k  Ctrl-K  Ctrl-P  *  Backward one line   (or N lines).
+    Search forward for matching line: /pattern          *  Search forward for (N-th) matching line.
+    Search backward for matching line: ?pattern          *  Search backward for (N-th) matching line.
+    Repeat previous search: n                 *  Repeat previous search (for N-th occurrence).
+    Repeat previous search in reverse direction: N                 *  Repeat previous search in reverse direction.
+
+Задание №3
+Для навигации в файловой системе нужно отличать директории от остальных типов файлов
+Определите типы этих файлов:
+    /dev/null (c символьные устройства)
+    /dev/zero (c символьные устройства)
+    /dev/sda (Alekkro@qap:~$ ls -la /dev/sda
+ls: cannot access '/dev/sda': No such file or directory
+Alekkro@qap:~$ ls -l /dev/sda
+ls: cannot access '/dev/sda': No such file or directory
+Alekkro@qap:~$ stat /dev/sda
+stat: cannot stat '/dev/sda': No such file or directory)
+    /dev/tty (c символьные устройства)
+    /root (d каталог)
+    /etc/passwd (– обычные файлы)
+    /proc/mounts (l символьные ссылки)
+    /bin/ls (– обычные файлы)
+    /bin/zcat (– обычные файлы)
+Напомню, для того, чтобы увидеть типы всех файлов в директории, можно использовать команду ls -l. Тип файла будет
+указан первым символом в строке
+Также, для того, чтобы посмотреть тип (и другую информацию) об одном отдельно взятом файле, можно использовать
+команду stat.
