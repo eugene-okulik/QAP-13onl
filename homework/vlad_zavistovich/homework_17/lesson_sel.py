@@ -7,7 +7,7 @@ chrome_options = Options()
 chrome_options.add_argument('start-maximized')
 driver = webdriver.Chrome(options=chrome_options)
 driver.get('https://www.amazon.com/')
-#driver.maximize_window() Это он сам растягивает на весь экран
+# driver.maximize_window() Это он сам растягивает на весь экран
 print(driver.current_url)
 print(driver.title)
 country = driver.find_element(By.ID, 'glow-ingress-line2')
