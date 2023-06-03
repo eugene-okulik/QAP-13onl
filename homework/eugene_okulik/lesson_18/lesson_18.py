@@ -16,6 +16,7 @@ driver.get('https://www.amazon.com/')
 country = driver.find_element(By.ID, 'glow-ingress-line2')
 print(country.text)
 deliver_to = driver.find_element(By.CLASS_NAME, 'a-popover-trigger')
+deliver_to = driver.find_element(By.CSS_SELECTOR, '.a-popover-trigger')
 print(deliver_to.get_attribute('class'))
 
 sleep(1)
