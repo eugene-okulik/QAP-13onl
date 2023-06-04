@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /var/log
+echo | sudo find -type f -name '*.log'
