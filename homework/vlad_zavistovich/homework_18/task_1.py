@@ -20,5 +20,4 @@ text_result = driver.find_element(By.ID, 'result')
 text_button = driver.find_element(By.ID, 'submit-id-submit')
 print(text_result.text)
 print(text_button.get_attribute('name'))
-
 # sleep(3)
