@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-# from time import sleep
+
 
 chrome_options = Options()
 chrome_options.add_argument('start-maximized')
@@ -20,4 +20,3 @@ text_result = driver.find_element(By.ID, 'result')
 text_button = driver.find_element(By.ID, 'submit-id-submit')
 print(text_result.text)
 print(text_button.get_attribute('name'))
-# sleep(3)
