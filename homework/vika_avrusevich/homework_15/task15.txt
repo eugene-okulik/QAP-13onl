@@ -1,0 +1,27 @@
+Задание №2
+
+man man -> h
+
+Go to first line in file: g  <  ESC-<
+Go to last line in file: G  >  ESC->
+Forward one window: f  ^F  ^V  SPACE
+Forward one line: e  ^E  j  ^N  CR
+Backward one line: y  ^Y  k  ^K  ^P
+Search forward for matching line: /pattern
+Search backward for matching line: ?pattern
+Repeat previous search: n
+Repeat previous search in reverse direction: N
+
+Задание №3
+
+(sudo) ls -l
+
+/dev/null crw-rw-rw- (символьный файл)
+/dev/zero crw-rw-rw- (символьный файл)
+/dev/sda brw-rw---- (блочный файл)
+/dev/tty crw-rw-rw- (символьный файл)
+/root drwx------ (директория)
+/etc/passwd -rw-r--r-- (обычный файл)
+/proc/mounts lrwxrwxrwx (символьная ссылка)
+/bin/ls -rwxr-xr-x (обычный файл)
+/bin/zcat -rwxr-xr-x (обычный файл)
