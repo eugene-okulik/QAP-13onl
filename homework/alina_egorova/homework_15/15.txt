@@ -17,12 +17,7 @@
 Определите типы этих файлов:
     /dev/null (c символьные устройства)
     /dev/zero (c символьные устройства)
-    /dev/sda (Alekkro@qap:~$ ls -la /dev/sda
-ls: cannot access '/dev/sda': No such file or directory
-Alekkro@qap:~$ ls -l /dev/sda
-ls: cannot access '/dev/sda': No such file or directory
-Alekkro@qap:~$ stat /dev/sda
-stat: cannot stat '/dev/sda': No such file or directory)
+    /dev/sda -> /dev/vda (b блочные устройства)
     /dev/tty (c символьные устройства)
     /root (d каталог)
     /etc/passwd (– обычные файлы)

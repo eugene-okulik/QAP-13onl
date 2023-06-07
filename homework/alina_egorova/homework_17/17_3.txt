@@ -1,0 +1,20 @@
+Задание №3
+Напишите команду, которая ищет все файлы, заканчивающиеся на ".log" в папке /var/log
+
+
+Alekkro@qap:~$ find /var/log -name '*.log'
+/var/log/kern.log
+/var/log/apt/term.log
+/var/log/apt/history.log
+/var/log/landscape/sysinfo.log
+/var/log/alternatives.log
+/var/log/cloud-init.log
+/var/log/droplet-agent.update.log
+/var/log/cloud-init-output.log
+/var/log/fontconfig.log
+find: ‘/var/log/private’: Permission denied
+/var/log/ubuntu-advantage.log
+/var/log/dpkg.log
+/var/log/auth.log
+/var/log/ubuntu-advantage-timer.log
+find: ‘/var/log/unattended-upgrades’: Permission denied
