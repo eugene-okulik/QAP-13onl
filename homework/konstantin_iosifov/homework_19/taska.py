@@ -23,7 +23,7 @@ driver.find_element(By.XPATH, value="/html/body/div[2]/div/div/div[2]/div[2]/div
 driver.find_element(By.ID, value="userNumber").send_keys("3752912345")
 
 # DOB
-dob = driver.find_element(By.ID, value="dateOfBirthInput").click()
+driver.find_element(By.ID, value="dateOfBirthInput").click()
 
 calendar_month = Select(driver.find_element(By.CLASS_NAME, value="react-datepicker__month-select"))
 calendar_month.select_by_value("2")
@@ -40,7 +40,8 @@ calendar_day = driver.find_element(By.CLASS_NAME, value="react-datepicker__day--
 # enter_sub = driver.find_element(By.XPATH, value="//*[@id='subjectsContainer']/div")
 # enter_sub.send_keys("English")
 # selenium.common.exceptions.ElementNotInteractableException: Message:
-# Element <div class="subjects-auto-complete__control subjects-auto-complete__control--is-focused subjects-auto-complete__control--menu-is-open css-1pahdxg-control"> is not reachable by keyboard
+# Element <div class="subjects-auto-complete__control subjects-auto-complete__control--is-focused
+# subjects-auto-complete__control--menu-is-open css-1pahdxg-control"> is not reachable by keyboard
 
 # Hobbies
 driver.find_element(By.XPATH, value="/html/body/div[2]/div/div/div[2]/div[2]/div[2]/form/div[7]/div[2]/div[1]/label")\
@@ -56,7 +57,7 @@ upload.send_keys("E:\\wallpapers\\bb.jpg")
 # Current address
 driver.find_element(By.ID, value="currentAddress").send_keys("Belarus")
 
-#State
+# State
 state_drop = driver.find_element(By.ID, value="state").click()
 time.sleep(1)
 state_sel = driver.find_element(By.ID, value="react-select-3-option-0").click()
@@ -104,7 +105,7 @@ stud_dob_value = driver.find_element(By.XPATH, value="/html/body/div[5]/div/div/
 stud_subj_label = driver.find_element(By.XPATH, value="/html/body/div[5]/div/div/div[2]/div/table/tbody/tr[6]/td[1]")\
     .text
 # stud_subj_value = driver.find_element(By.XPATH, value="/html/body/div[5]/div/div/div[2]/div/table/tbody/tr[5]/td[2]")\
-    #.text
+#    .text
 
 # Hobbies
 stud_hobb_label = driver.find_element(By.XPATH, value="/html/body/div[5]/div/div/div[2]/div/table/tbody/tr[7]/td[1]")\
