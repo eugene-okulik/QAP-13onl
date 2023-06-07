@@ -1,0 +1,11 @@
+Типы файлов:
+
+/dev/null - формат "с" - символьное устройство (crw-rw-rw- )
+/dev/zero - формат "с" - символьное устройство (crw-rw-rw- )
+/dev/sda - как я понимаю это диск. Но у меня выдает: No such file or directory
+/dev/tty - формат "с" - символьное устройство (crw-rw-rw-)
+/root - формат "d" - директория (drwxr-xr-x)
+/etc/passwd - формат "-" - файл (-rw-r--r--)
+/proc/mounts формат "l" - ссылка (lrwxrwxrwx)
+/bin/ls - формат "-" - файл (-rwxr-xr-x)
+/bin/zcat - формат "-" - файл (-rwxr-xr-x)

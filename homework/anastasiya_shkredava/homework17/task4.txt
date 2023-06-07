@@ -1,0 +1,5 @@
+chmod 750 /home/nastya
+
+or
+
+chmod g+rx /home/nastya
