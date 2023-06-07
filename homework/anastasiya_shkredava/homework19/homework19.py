@@ -5,7 +5,6 @@ from selenium.webdriver.common.by import By
 options = Options()
 options.add_argument('--window-size=615,641')
 chrome_driver = webdriver.Chrome(options=options)
-# chrome_driver.maximize_window()
 chrome_driver.get('https://demoqa.com/automation-practice-form')
 chrome_driver.find_element(By.ID, 'firstName').send_keys('Kung Fu')
 chrome_driver.find_element(By.ID, 'lastName').send_keys('Panda')
