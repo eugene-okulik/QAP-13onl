@@ -50,5 +50,6 @@ def decode(text, shift, lang):
 
 
 encoded_text = encode(text, shift, lang)
+print(encoded_text)
 decoded_text = decode(encoded_text, shift, lang)
 print(decoded_text)
