@@ -1,0 +1,15 @@
+#!/bin/bash
+
+while true; do
+	read -p "Введите слово (для завершения введите '.'): " word
+
+	if [ "$word" == "." ]; then
+		break
+	fi
+
+	if [ ${#word} -le 5 ]; then
+		echo "ok"
+	else
+		echo "слово слишком длинное"
+	fi
+done

@@ -1,0 +1,2 @@
+chmod 750 /home/pasha_p
+chmod u+rwx,g+rx,o- /home/pasha_p
