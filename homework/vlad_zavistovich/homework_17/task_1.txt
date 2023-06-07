@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Вы хотите установит Python на свой компьютер?"
+PS3='Выберете вариант(цифру) ответа: '
+select number in "Да" "Нет"
+do
+if [[ $number == "Да" ]]
+then echo "Вы выбрали установить python"
+else echo "Все равно установим :)"
+fi
+break
+done
+
+

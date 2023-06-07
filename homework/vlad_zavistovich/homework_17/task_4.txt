@@ -1,0 +1,4 @@
+chmod 750 /home/VladZera
+Либо
+chmod u+rwx,g+rx,o- /home/VladZera
+.
