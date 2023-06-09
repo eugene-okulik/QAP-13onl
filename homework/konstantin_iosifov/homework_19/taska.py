@@ -1,5 +1,6 @@
 import time
 from selenium import webdriver
+from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 import tabulate
@@ -33,15 +34,13 @@ calendar_year.select_by_value("1996")
 
 calendar_day = driver.find_element(By.CLASS_NAME, value="react-datepicker__day--013").click()
 
-# Subject //// Никак не получается хотя бы что-то ввести в Subject.
-# Пробовал по классу, по xpath. И в ошибке все равно падает почему-то класс is not reachable by keyboard############
-# find_sub = driver.find_element(By.XPATH, value="//*[@id='subjectsContainer']/div/div[1]")
-# find_sub.click()
-# enter_sub = driver.find_element(By.XPATH, value="//*[@id='subjectsContainer']/div")
-# enter_sub.send_keys("English")
-# selenium.common.exceptions.ElementNotInteractableException: Message:
-# Element <div class="subjects-auto-complete__control subjects-auto-complete__control--is-focused
-# subjects-auto-complete__control--menu-is-open css-1pahdxg-control"> is not reachable by keyboard
+# Subject ////
+find_sub = driver.find_element(By.ID, value="subjectsInput")
+time.sleep(1)
+find_sub.send_keys("English")
+time.sleep(1)
+driver.find_element(By.ID, value="react-select-2-option-0").click()
+time.sleep(1)
 
 # Hobbies
 driver.find_element(By.XPATH, value="/html/body/div[2]/div/div/div[2]/div[2]/div[2]/form/div[7]/div[2]/div[1]/label")\
