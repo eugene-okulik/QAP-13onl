@@ -30,11 +30,10 @@ chrome_driver.find_element(By.ID, 'dateOfBirthInput').click()
 chrome_driver.find_element(By.CSS_SELECTOR, 'div[aria-label="Choose Friday, June 23rd, 2023"]').click()
 
 # Subjects filling
-chrome_driver.find_element(By.CSS_SELECTOR, 'input[wfd-id="id8"]').send_keys('English')
 chrome_driver.implicitly_wait(1)
+chrome_driver.find_element(By.CSS_SELECTOR, 'input[wfd-id="id8"]').send_keys('English')
 chrome_driver.find_element(By.ID, 'react-select-2-option-0').click()
 chrome_driver.find_element(By.CSS_SELECTOR, 'input[wfd-id="id8"]').send_keys('Chemistry')
-chrome_driver.implicitly_wait(1)
 chrome_driver.find_element(By.ID, 'react-select-2-option-0').click()
 
 # Hobbies filling
