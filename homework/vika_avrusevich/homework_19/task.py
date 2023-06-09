@@ -42,9 +42,9 @@ driver.find_element(By.CSS_SELECTOR, 'div[aria-label="Choose Wednesday, June 7th
 # subjects
 driver.find_element(By.ID, 'subjectsInput').send_keys('Maths')
 driver.find_element(By.ID, 'react-select-2-option-0').click()
-# получается добавить в поле только один предмет, с последующими выедает ошибку
-# driver.find_element(By.ID, 'subjectsInput').send_keys('Commerce')
-# driver.find_element(By.ID, 'react-select-2-option-0').click()
+driver.implicitly_wait(10)
+driver.find_element(By.ID, 'subjectsInput').send_keys('Commerce')
+driver.find_element(By.ID, 'react-select-2-option-0').click()
 
 # hobbies
 driver.find_element(By.CSS_SELECTOR, 'label[for="hobbies-checkbox-1"]').click()
