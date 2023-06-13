@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 options = Options()
-options.add_argument('--window-size=615,641')
+options.add_argument('--window-size=700,1280')
 chrome_driver = webdriver.Chrome(options=options)
 
 chrome_driver.get('https://demoqa.com/automation-practice-form')
@@ -17,13 +17,13 @@ chrome_driver.find_element(By.ID, 'lastName').send_keys('Panda')
 
 # Email filling
 chrome_driver.find_element(By.ID, 'userEmail').send_keys('kungfupanda@gmail.com')
-chrome_driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
 
 # Gender filling
 chrome_driver.find_element(By.CSS_SELECTOR, 'label[for="gender-radio-1"]').click()
 
 # Mobile number filling
 chrome_driver.find_element(By.ID, 'userNumber').send_keys('0123456789')
+chrome_driver.execute_script("window.scrollTo(0, 1280)")
 
 # Date of Birth filling
 chrome_driver.find_element(By.ID, 'dateOfBirthInput').click()
@@ -31,9 +31,10 @@ chrome_driver.find_element(By.CSS_SELECTOR, 'div[aria-label="Choose Friday, June
 
 # Subjects filling
 chrome_driver.implicitly_wait(1)
-chrome_driver.find_element(By.CSS_SELECTOR, 'input[wfd-id="id8"]').send_keys('English')
+subjects_field = chrome_driver.find_element(By.ID, 'subjectsInput')
+subjects_field.send_keys('English')
 chrome_driver.find_element(By.ID, 'react-select-2-option-0').click()
-chrome_driver.find_element(By.CSS_SELECTOR, 'input[wfd-id="id8"]').send_keys('Chemistry')
+subjects_field.send_keys('Chemistry')
 chrome_driver.find_element(By.ID, 'react-select-2-option-0').click()
 
 # Hobbies filling
