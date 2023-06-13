@@ -17,6 +17,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 # from selenium.webdriver.support.select import Select
+import os
+
 
 chrome_options = Options()
 chrome_options.add_argument('--window-size=700,1080')
@@ -40,9 +42,9 @@ driver.find_element(By.CSS_SELECTOR, 'div[aria-label="Choose Wednesday, June 7th
 # driver.find_element(By.CLASS_NAME, 'react-datepicker__day--007').click()
 
 # subjects
+driver.implicitly_wait(10)
 driver.find_element(By.ID, 'subjectsInput').send_keys('Maths')
 driver.find_element(By.ID, 'react-select-2-option-0').click()
-driver.implicitly_wait(10)
 driver.find_element(By.ID, 'subjectsInput').send_keys('Commerce')
 driver.find_element(By.ID, 'react-select-2-option-0').click()
 
@@ -50,7 +52,10 @@ driver.find_element(By.ID, 'react-select-2-option-0').click()
 driver.find_element(By.CSS_SELECTOR, 'label[for="hobbies-checkbox-1"]').click()
 driver.find_element(By.CSS_SELECTOR, 'label[for="hobbies-checkbox-2"]').click()
 
-driver.find_element(By.ID, 'uploadPicture').send_keys('/home/victoria/Загрузки/bee.jpg')  # picture
+# picture
+sys_path = os.path.join(os.path.dirname(__file__), 'bee.jpg')
+driver.find_element(By.ID, 'uploadPicture').send_keys(sys_path)
+
 driver.find_element(By.ID, 'currentAddress').send_keys('Here')  # current address
 
 # state
