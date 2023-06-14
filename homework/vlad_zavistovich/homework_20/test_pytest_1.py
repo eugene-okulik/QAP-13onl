@@ -69,7 +69,7 @@ def test_text_3(s_session, s_test):
 
 
 @pytest.mark.hard
-def test_text_3(s_session, s_test):
+def test_true(s_session, s_test):
     number_r = True
     assert number_r is True
 
