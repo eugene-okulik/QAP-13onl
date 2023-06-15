@@ -33,7 +33,7 @@ def test_1(driver):
     driver.close()
     driver.switch_to.window(driver.window_handles[0])
     driver.find_element(By.ID, 'cartur').click()
-    buy_product = driver.find_element(By.XPATH, '//*[@id="tbodyid"]/tr/td[2]').text    ############################
+    buy_product = driver.find_element(By.XPATH, '//*[@id="tbodyid"]/tr/td[2]').text
     assert product == buy_product
 
 
