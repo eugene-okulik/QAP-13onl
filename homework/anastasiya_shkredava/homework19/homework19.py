@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import os
 
 
 options = Options()
@@ -42,7 +43,9 @@ chrome_driver.find_element(By.CSS_SELECTOR, 'label[for="hobbies-checkbox-1"]').c
 chrome_driver.find_element(By.CSS_SELECTOR, 'label[for="hobbies-checkbox-3"]').click()
 
 # Picture uploading
-# chrome_driver.find_element(By.ID, 'uploadPicture').send_keys("C:\\Temp\\background.png")
+path = os.path.dirname(__file__)
+sys_path = os.path.join(path, 'symbol.PNG')
+chrome_driver.find_element(By.ID, 'uploadPicture').send_keys(sys_path)
 chrome_driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
 
 # Current Address filling
