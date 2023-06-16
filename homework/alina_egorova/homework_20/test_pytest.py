@@ -36,15 +36,15 @@ def test_three(every):
 @pytest.mark.hard
 @pytest.mark.parametrize(
     'num',
-    [0, 2, 5, 8, 3, 4, 7]
+    [0, 2, 5, 8, 3, 4, 7, 15, 24]
 )
 def test_four(every, num):
     subtraction2 = num - 3
-    assert subtraction2 == 1
+    assert subtraction2 < 5
 
 
 def test_five(every):
-    division = 15 / 3
+    division = 15 // 3
     assert division == 5
 
 
@@ -55,28 +55,32 @@ def test_six(every):
 
 
 @pytest.mark.simple
-def test_seven(every):
-    division2 = 20 / 5
-    assert division2 == 4
+@pytest.mark.parametrize(
+    'num1',
+    [2, 3, 4, 5, 6]
+)
+def test_seven(every, num1):
+    division2 = num1 % 2
+    assert division2 == 0
 
 
 @pytest.mark.parametrize(
-    'num1',
+    'num2',
     [0, 2, 5, 8, 3]
 )
-def test_eight(every, num1):
-    summ2 = num1 + 7
+def test_eight(every, num2):
+    summ2 = num2 + 7
     assert summ2 == 15
 
 
 @pytest.mark.hard
 @pytest.mark.parametrize(
-    'num2',
+    'num3',
     [2, 3, 4, 5, 6]
 )
-def test_nine(every, num2):
-    degree = 5 ** num2
-    assert degree == 625
+def test_nine(every, num3):
+    degree = 5 ** num3
+    assert degree != 625
 
 
 @pytest.mark.hard
