@@ -2,7 +2,7 @@ from pages.eco_friendly_page import EcoFriendlyPage as EFP
 from pages.search_result_page import SearchResult as SR
 
 
-def test_strong_password(driver):  # максимальное количество товаров на странице при отображении сеткой
+def test_max_items_grid(driver):  # максимальное количество товаров на странице при отображении сеткой
     ef_page = EFP(driver)
     ef_page.open_page()
     assert ef_page.quantity_products == 12
