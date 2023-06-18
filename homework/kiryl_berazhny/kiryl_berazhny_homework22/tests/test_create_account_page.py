@@ -1,7 +1,6 @@
 from pages.create_account_page import CreateAccountPage as CAP
 from pages.confirm_page import ConfirmPage as CP
 import random
-from time import sleep
 
 
 def test_strong_password(driver):  # проверяем подсвечен ли показатель надежности пароля
@@ -40,7 +39,6 @@ def test_existing_email(driver):  # проверяем, подсвечена л�
     ca_page.enter_pass_one('Qwertyasd8')
     ca_page.enter_pass_two('Qwertyasd8')
     ca_page.click_submit()
-    sleep(3)
     conf_page = CP(driver)
     conf_page.click_select_out()
     conf_page.click_sign_out()
