@@ -24,15 +24,17 @@ def test_one(driver):
     actions = ActionChains(driver)
     actions.key_down(Keys.CONTROL).click(items[0]).key_up(Keys.CONTROL).perform()
     driver.switch_to.window(driver.window_handles[1])
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "[onclick='addToCart(1)']")))
-    driver.find_element(By.CSS_SELECTOR, "[onclick='addToCart(1)']").click()
+    add_to_card_loc = (By.CSS_SELECTOR, "[onclick='addToCart(1)']")
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable(add_to_card_loc))
+    driver.find_element(*add_to_card_loc).click()
     WebDriverWait(driver, 10).until(EC.alert_is_present())
     Alert(driver).accept()
     driver.close()
     driver.switch_to.window(driver.window_handles[0])
     driver.find_element(By.ID, "cartur").click()
-    WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='tbodyid']/tr/td[2]")))
-    added_item = driver.find_element(By.XPATH, "//*[@id='tbodyid']/tr/td[2]")
+    added_item_loc = (By.XPATH, "//*[@id='tbodyid']/tr/td[2]")
+    WebDriverWait(driver, 10).until(EC.visibility_of_element_located(added_item_loc))
+    added_item = driver.find_element(*added_item_loc)
     assert item_to_add == added_item.text
 
 
@@ -49,7 +51,8 @@ def test_two(driver):
 def test_three(driver):
     driver.get('https://www.qa-practice.com/elements/alert/prompt')
     driver.find_element(By.LINK_TEXT, 'Click').click()
-    Alert(driver).send_keys('some text')
+    text = 'some text'
+    Alert(driver).send_keys(text)
     Alert(driver).accept()
     result_text = driver.find_element(By.ID, 'result-text').text
-    assert result_text == 'some text'
+    assert result_text == text
