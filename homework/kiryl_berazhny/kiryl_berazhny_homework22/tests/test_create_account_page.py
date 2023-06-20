@@ -1,9 +1,11 @@
 from pages.create_account_page import CreateAccountPage as CAP
 from pages.confirm_page import ConfirmPage as CP
 import random
+import allure
 
 
-def test_strong_password(driver):  # проверяем подсвечен ли показатель надежности пароля
+@allure.story('Password strength')
+def test_strong_password(driver):
     ca_page = CAP(driver)
     ca_page.open_page()
     ca_page.scroll()
@@ -11,7 +13,8 @@ def test_strong_password(driver):  # проверяем подсвечен ли 
     assert ca_page.check_password.is_displayed()
 
 
-def test_confirm_text(driver):  # проверяем, правильно ли приняты данные для регистрации аккаунта
+@allure.story('Validation of confirmation text')
+def test_confirm_text(driver):
     ca_page = CAP(driver)
     ca_page.open_page()
     first_name = 'Kiryl'
@@ -19,7 +22,7 @@ def test_confirm_text(driver):  # проверяем, правильно ли п
     second_name = 'Berazhny'
     ca_page.enter_second_name(second_name)
     ca_page.scroll()
-    email = f'q@{str(random.randint(1, 99999))}.com'  # так как нельзя одну и ту же почту
+    email = f'q@{str(random.randint(1, 99999))}.com'
     ca_page.enter_email(email)
     ca_page.enter_pass_one('Qwertyasd8')
     ca_page.enter_pass_two('Qwertyasd8')
@@ -28,6 +31,7 @@ def test_confirm_text(driver):  # проверяем, правильно ли п
     assert f'{first_name} {second_name}\n{email}' == conf_page.check_result
 
 
+@allure.story('Checking existing mail')
 def test_existing_email(driver):  # проверяем, подсвечена ли ошибка при регистрации существующей почты
     ca_page = CAP(driver)
     ca_page.open_page()

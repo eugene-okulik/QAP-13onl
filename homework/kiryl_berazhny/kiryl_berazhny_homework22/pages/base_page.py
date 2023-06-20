@@ -2,6 +2,7 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+import allure
 
 
 class BasePage:
@@ -11,6 +12,7 @@ class BasePage:
     def __init__(self, driver: WebDriver):
         self.driver = driver
 
+    @allure.step('Open page')
     def open_page(self):
         self.driver.get(f'{self.base_url}{self.page_url}')
 
@@ -47,5 +49,6 @@ class BasePage:
         )
         return self.driver.find_element(*locator)
 
+    @allure.step('Scroll page down')
     def scroll(self):
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
