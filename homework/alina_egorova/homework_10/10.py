@@ -63,26 +63,33 @@ class Buket:
         self.flowers_in_bouquet = flowers_in_bouquet
 
     def get_price(self):
-        return sum([__.get_price() for __ in self.flowers_in_bouquet])
+        return sum([x.get_price() for x in self.flowers_in_bouquet])
 
     def sorted_by_freshness(self):
-        self.flowers_in_bouquet.sort(key=lambda __: __.get_freshness())
+        self.flowers_in_bouquet.sort(key=lambda x: x.get_freshness())
 
     def sorted_by_life(self):
-        return [__ for __ in self.flowers_in_bouquet if __.get_life()]
+        return [x for x in self.flowers_in_bouquet if x.get_life()]
 
     def sorted_by_length(self):
-        self.flowers_in_bouquet.sort(key=lambda __: __.get_stem_length())
+        self.flowers_in_bouquet.sort(key=lambda x: x.get_stem_length())
+
+    def sort_by_color(self):
+        self.flowers_in_bouquet = sorted(self.flowers_in_bouquet, key=lambda f: f.color.lower())
+
+    def search_by_param(self, param_name, param_value):
+        return [x for x in self.flowers_in_bouquet if getattr(x, param_name) == param_value]
 
 
-rose = Rose1('Rose', 90, 'orange-yellow', 80, 170, 10)
-rose2 = Rose2('Rose', 95, 'yellow', 120, 200, 12)
-rose3 = Rose3('Rose', 80, 'red', 60, 160, 7)
+rose = Rose1('Rose Freedom', 90, 'red', 80, 170, 10)
+rose2 = Rose2('Rose Nicole', 95, 'yellow', 120, 200, 12)
+rose3 = Rose3('Rose Lens', 80, 'red', 60, 160, 7)
 chrysanthemums = Chrysanthemums('Chrysanthemum', 80, 'white', 110, 150, 15)
 peony = Peony('Peony', 75, 'dark-pink', 80, 250, 5)
 
 flowers = [rose, rose2, rose3, chrysanthemums, peony]
 bouquet = Buket(flowers)
+
 
 for flower in bouquet.flowers_in_bouquet:
     print('Name -', flower.name)
@@ -91,5 +98,9 @@ for flower in bouquet.flowers_in_bouquet:
     print('Freshness -', flower.freshness, '%')
     print('Flower stem length -', flower.stem_length, 'cm')
     print('Average life time -', flower.life, 'days')
+
+found_flowers = bouquet.search_by_param('color', 'red')
+for flower in found_flowers:
+    print(flower.name, flower.color)
 
 print('Bouquet price =', bouquet.get_price(), 'rubles')
