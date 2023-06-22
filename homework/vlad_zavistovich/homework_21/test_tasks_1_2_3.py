@@ -44,7 +44,7 @@ def test_2(driver):
 def test_3(driver):
     driver.get('https://www.qa-practice.com/elements/alert/prompt')
     driver.find_element(By.CLASS_NAME, 'a-button').click()
-    text_alert = 'Привет медвед'
+    text_alert = 'Превед медвед'
     Alert(driver).send_keys(text_alert)
     Alert(driver).accept()
     assert text_alert == driver.find_element(By.ID, 'result-text').text
