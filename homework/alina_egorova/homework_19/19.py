@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import os
 
 
 ch_driver = webdriver.Chrome()
@@ -20,7 +21,10 @@ ch_driver.find_element(By.ID, 'subjectsInput').send_keys('m')
 ch_driver.find_element(By.ID, 'react-select-2-option-2').click()
 ch_driver.find_element(By.ID, 'subjectsInput').send_keys('b')
 ch_driver.find_element(By.ID, 'react-select-2-option-0').click()
-ch_driver.find_element(By.XPATH, '//*[@id="uploadPicture"]').send_keys("C:/Users/User/Desktop/hi/image.jpeg")
+path = os.path.dirname(__file__)
+print(f'{path}/img.png')
+sys_path = os.path.join(path, 'img.png')
+ch_driver.find_element(By.XPATH, '//*[@id="uploadPicture"]').send_keys(sys_path)
 ch_driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 ch_driver.find_element(By.XPATH, '//*[@id="currentAddress"]').send_keys(
     'Russia, Khabarovsk Territory, Khabarovsk, Pacific street, 217'
