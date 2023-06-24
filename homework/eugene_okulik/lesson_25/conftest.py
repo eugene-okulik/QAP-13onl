@@ -19,4 +19,3 @@ def create_short_url(random_url):
     new_url_endp.post_request()
     short_code = new_url_endp.short_code
     return short_code
-
