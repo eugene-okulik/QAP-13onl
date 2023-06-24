@@ -36,8 +36,6 @@ class PostNewUrl(Endpoint):
         self.short_code = self.response_json['code']
         return response
 
-
-
     @property
     def url_to_shorten_is_correct_in_the_response(self):
         return self.response_json['long'] == self.__random_url
