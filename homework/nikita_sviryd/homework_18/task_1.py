@@ -22,4 +22,3 @@ print(text_result.text)
 print(text_button.get_attribute('value'))
 
 sleep(2)
-
