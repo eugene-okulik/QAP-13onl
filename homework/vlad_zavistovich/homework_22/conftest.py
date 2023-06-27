@@ -6,4 +6,3 @@ import pytest
 def driver():
     chrome_driver = webdriver.Chrome()
     return chrome_driver
-
