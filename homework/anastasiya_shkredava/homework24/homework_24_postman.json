@@ -100,7 +100,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"input\": \"https://popolskupopolsce.edu.pl\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -139,7 +139,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"input\": \"https://popolskupopolsce.edu.pl\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
