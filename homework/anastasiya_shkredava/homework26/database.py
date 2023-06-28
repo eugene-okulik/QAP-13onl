@@ -13,7 +13,7 @@ cursor = db.cursor(dictionary=True)
 
 
 def create_group(title, start_date, end_date):
-    create_group_query = '''INSERT 
+    create_group_query = '''INSERT
                          INTO `groups` (title, start_date, end_date)
                          VALUES (%s, %s, %s)'''
     values = (title, start_date, end_date)
@@ -47,7 +47,7 @@ def create_book(books, st_id):
 def student_data(st_id):
     data_query = '''SELECT students.name, students.second_name, `groups`.title as group_title, books.title as book_title
                 FROM `groups`
-                JOIN students ON `groups`.id = students.group_id 
+                JOIN students ON `groups`.id = students.group_id
                 JOIN books ON students.id = books.taken_by_student_id
                 WHERE students.id = %s'''
     values = (st_id,)
