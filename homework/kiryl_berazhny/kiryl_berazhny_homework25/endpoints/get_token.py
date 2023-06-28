@@ -23,13 +23,13 @@ class GetToken(BaseEndpoint):
         return token
 
     def invalid_token(self):
-        response = requests.get(f'http://167.172.172.115:52355/authorize/XXXXXXXXXXX')
+        response = requests.get('http://167.172.172.115:52355/authorize/XXXXXXXXXXX')
         self.text = response.text
         self.status_code = response.status_code
 
     @property
     def response_text_contains_correct_username_for_token(self):
-        return self.text == f'Token is alive. Username is KirylBerazhny'
+        return self.text == 'Token is alive. Username is KirylBerazhny'
 
     @property
     def message_about_token_invalidity(self):

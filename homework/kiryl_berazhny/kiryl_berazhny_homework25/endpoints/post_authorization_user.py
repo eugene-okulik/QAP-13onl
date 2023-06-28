@@ -15,7 +15,7 @@ class PostAuthorization(BaseEndpoint):
         if username or username == '':
             self.username = username
             body = {
-                'name': username
+                'name': self.username
             }
         else:
             self.username = 'KirylBerazhny'

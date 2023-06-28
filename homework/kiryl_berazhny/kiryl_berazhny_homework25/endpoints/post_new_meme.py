@@ -23,7 +23,7 @@ class PostNewMeme(BaseEndpoint):
                 'info': {
                     "colors": ["green", "black", "white"],
                     "objects": ["picture", "text"]
-                         }
+                }
             }
         elif field == 'miss':
             body = {
@@ -32,7 +32,7 @@ class PostNewMeme(BaseEndpoint):
                 'info': {
                     "colors": ["green", "black", "white"],
                     "objects": ["picture", "text"]
-                         }
+                }
             }
         elif field == 'unfilled':
             body = {
@@ -53,7 +53,7 @@ class PostNewMeme(BaseEndpoint):
                 'info': {
                     "colors": ["green", "black", "white"],
                     "objects": ["picture", "text"]
-                         }
+                }
             }
         response = requests.post(
             'http://167.172.172.115:52355/meme',
@@ -94,6 +94,7 @@ class PostNewMeme(BaseEndpoint):
     @property
     def correct_message_internal_server_error(self):
         return 'Internal Server Error' in self.text
+
     @property
     def correct_message_error_bad_request(self):
         return '400 Bad Request' in self.text

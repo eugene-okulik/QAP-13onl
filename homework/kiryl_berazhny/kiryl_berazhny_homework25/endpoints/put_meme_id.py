@@ -97,9 +97,9 @@ class PutMemeId(BaseEndpoint):
     @property
     def info_check(self):
         return self.response_json['info'] == {
-                                        "colors": ["red", "black", "white", "blue"],
-                                        "objects": ["picture", "text"]
-            }
+            "colors": ["red", "black", "white", "blue"],
+            "objects": ["picture", "text"]
+        }
 
     @property
     def id_check(self):
