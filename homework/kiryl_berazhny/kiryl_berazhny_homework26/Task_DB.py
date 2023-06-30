@@ -73,5 +73,4 @@ books = ['Factotum', 'Women']
 new_books_a_student(id_student, books)
 info_student(id_student)
 
-
 db.close()
