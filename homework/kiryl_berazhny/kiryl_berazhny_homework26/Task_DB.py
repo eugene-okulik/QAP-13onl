@@ -49,9 +49,9 @@ def new_books_a_student(student, book):
 def info_student(student):
     cursor.execute(
         '''SELECT students.name, students.second_name, `groups`.title as group_title, books.title as book_title
-        FROM students 
-        JOIN books ON students.id = books.taken_by_student_id 
-        JOIN `groups` ON students.group_id = `groups`.id  
+        FROM students
+        JOIN books ON students.id = books.taken_by_student_id
+        JOIN `groups` ON students.group_id = `groups`.id
         WHERE students.id = %s''',
         (student,)
     )
