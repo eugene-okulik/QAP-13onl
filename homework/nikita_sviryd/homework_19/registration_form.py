@@ -5,7 +5,6 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 
-
 driver = webdriver.Chrome()
 driver.set_window_size(650, 1000)
 driver.get('https://demoqa.com/automation-practice-form')
@@ -49,4 +48,3 @@ driver.find_element(By.XPATH, '//*[@id="react-select-4-option-0"]').click()
 driver.find_element(By.ID, 'submit').click()
 
 sleep(5)
-
