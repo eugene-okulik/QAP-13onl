@@ -1,6 +1,7 @@
 import pytest
 
 
+
 @pytest.fixture(scope="session", autouse=True)
 def before_all():
     print("Before all")
