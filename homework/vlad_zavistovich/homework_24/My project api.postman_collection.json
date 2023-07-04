@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "1b720c3f-d492-4b8f-94f5-bc5ad0b1f309",
+		"name": "My project api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28096087",
+		"_collection_link": "https://interstellar-meteor-963970.postman.co/workspace/Vlad~1ae32bb5-87d8-484a-8956-7dc9a90e28dc/collection/28096087-1b720c3f-d492-4b8f-94f5-bc5ad0b1f309?action=share&creator=28096087&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Random short link",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"input\": \"https://www.otomoto.pl/osobowe/oferta/volkswagen-scirocco-volkswagen-scirocco-2-0-tsi-dsg-ID6Fzndx.html\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Custom short link",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"long\": \"https://www.otomoto.pl/osobowe/oferta/volkswagen-scirocco-volkswagen-scirocco-2-0-tsi-dsg-ID6Fzndx.html\",\n    \"custom\": \"my_dream_car_1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Custom short link_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"long\": \"https://www.otomoto.pl/osobowe/oferta/volkswagen-scirocco-2-0tdiallstarrzadko-spotykanyzajestrowany-w-niemczech-ID6FAjBP.html\",\n    \"custom\": \"my_dream_car_2\",\n    \"useFallback\": false\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Long link",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api/my_dream_car_1?format=json",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api",
+						"my_dream_car_1"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
