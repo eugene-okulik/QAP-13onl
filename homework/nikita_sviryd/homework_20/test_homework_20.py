@@ -4,6 +4,8 @@ import pytest
 @pytest.fixture(scope="session", autouse=True)
 def before_all():
     print("Before all")
+    yield
+    print("After all")
 
 
 @pytest.fixture(autouse=True)
@@ -43,7 +45,3 @@ def test_simple():
 @pytest.mark.hard
 def test_hard():
     assert True
-
-
-def pytest_session_finish(session, exit_status):
-    print("After all")
