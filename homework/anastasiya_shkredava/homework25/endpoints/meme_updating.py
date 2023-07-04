@@ -11,21 +11,19 @@ class MemeUpdating(Endpoint):
 
     def update_meme(self):
         self.body = {
-            "id": self.get_meme_id,
-            "text": "shrek meme updated",
+            "text": "updated shrek meme",
             "url": "https://memes.com/m/3KELQpVyExX",
-            "tags":
-                [
-                    "fun",
-                    "updated shrek"
-                ],
+            "tags": [
+                "upd fun",
+                "upd shrek"
+            ],
             "info": {
                 "objects":
                     [
-                        "updated image",
-                        "updated video"
+                        "upd image",
+                        "upd video"
                     ]
-                }
+            }
         }
         headers = {
             'Content-Type': 'application/json',
