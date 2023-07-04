@@ -11,6 +11,7 @@ class MemeUpdating(Endpoint):
 
     def update_meme(self):
         self.body = {
+            "id": self.get_meme_id,
             "text": "updated shrek meme",
             "url": "https://memes.com/m/3KELQpVyExX",
             "tags": [
