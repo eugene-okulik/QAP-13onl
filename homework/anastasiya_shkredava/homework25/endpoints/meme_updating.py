@@ -3,7 +3,6 @@ from endpoints.endpoint_handler import Endpoint
 
 
 class MemeUpdating(Endpoint):
-
     updated_text = None
     updated_url = None
     updated_tags = None

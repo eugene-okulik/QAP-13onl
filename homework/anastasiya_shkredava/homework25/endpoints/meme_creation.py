@@ -16,7 +16,10 @@ class MemeCreation(Endpoint):
         self.body = {
             "text": "shrek meme",
             "url": "https://memes.com/m/VzBO6krdByx",
-            "tags": ["fun", "shrek"],
+            "tags": [
+                "fun",
+                "shrek"
+            ],
             "info": {
                 "objects":
                     [
