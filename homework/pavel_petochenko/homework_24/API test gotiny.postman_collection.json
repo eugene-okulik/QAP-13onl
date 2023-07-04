@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "bcf7e101-5eec-49e0-bd6f-b889016d75f9",
+		"name": "API test gotiny",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28307364"
+	},
+	"item": [
+		{
+			"name": "Creating links without additional options",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"input\": \"https://www.gismeteo.com/\"\n}"
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating links using custom options",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"input\": \"https://www.gismeteo.com/\",\n  \"custom\": \"weather7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating a link using the custom and useFallback options",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"input\": \"https://www.gismeteo.com/\",\n    \"custom\": \"weather8\",\n    \"useFallback\": true\n}"
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting a long link as text",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://gotiny.cc/api/tc5ptw",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api",
+						"tc5ptw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting a long link as json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://gotiny.cc/api/tc5ptw",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api",
+						"tc5ptw"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
