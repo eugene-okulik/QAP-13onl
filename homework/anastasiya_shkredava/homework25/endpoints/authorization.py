@@ -24,7 +24,7 @@ class Authorization(Endpoint):
             "name": f"{name}"
         }
         headers = {
-                'Content-Type': 'application/json'
+            'Content-Type': 'application/json'
         }
         response = requests.post(
             'http://167.172.172.115:52355/authorize',

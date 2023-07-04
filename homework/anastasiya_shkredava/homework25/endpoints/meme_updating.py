@@ -26,7 +26,7 @@ class MemeUpdating(Endpoint):
                         "updated image",
                         "updated video"
                     ]
-                    }
+            }
         }
         headers = {
             'Content-Type': 'application/json',

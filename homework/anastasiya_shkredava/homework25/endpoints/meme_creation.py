@@ -14,17 +14,17 @@ class MemeCreation(Endpoint):
 
     def create_meme(self):
         self.body = {
-                "text": "shrek meme",
-                "url": "https://memes.com/m/VzBO6krdByx",
-                "tags": ["fun", "shrek"],
-                "info": {
-                        "objects":
-                            [
-                                "image",
-                                "video"
-                            ]
-                        }
-                }
+            "text": "shrek meme",
+            "url": "https://memes.com/m/VzBO6krdByx",
+            "tags": ["fun", "shrek"],
+            "info": {
+                "objects":
+                    [
+                        "image",
+                        "video"
+                    ]
+            }
+        }
         headers = {
             'Content-Type': 'application/json',
             'Authorization': f'{self.get_token}'
