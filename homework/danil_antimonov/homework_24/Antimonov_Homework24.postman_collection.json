@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "82ce958e-57be-474e-aa87-536adf34e662",
+		"name": "Antimonov_Homework24",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13495063"
+	},
+	"item": [
+		{
+			"name": "Создание ссылки без дополнительных опций",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"input\": \"https://aliexpress.ru/item/1005003413165776.html?feed_id=20&_randl_currency=RUB&_randl_shipto=RU&sellermenu_hide=true&src=googleweb&albch=dspl&aff_short_key=brxT3bLh&isdl=y&aff_platform=jvru&utm_medium=cpc&utm_source=google&utm_campaign=JVRU_ALI_GOOGLE_WEB_UA_CROSS_CIS(GE)_PERFOMAX&gclid=CjwKCAjwl6OiBhA2EiwAuUwWZa7escVQDFZgUPmBK4fdumOLCXmMb9zn5P0v5uSvCIrbNR5tkiS3ohoCSb8QAvD_BwE&sku_id=12000025675682022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание ссылки с использованием опций custom и useFallback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"long\":\"https://aliexpress.ru/item/1005003413165776.html?feed_id=20&_randl_currency=RUB&_randl_shipto=RU&sellermenu_hide=true&src=googleweb&albch=dspl&aff_short_key=brxT3bLh&isdl=y&aff_platform=jvru&utm_medium=cpc&utm_source=google&utm_campaign=JVRU_ALI_GOOGLE_WEB_UA_CROSS_CIS(GE)_PERFOMAX&gclid=CjwKCAjwl6OiBhA2EiwAuUwWZa7escVQDFZgUPmBK4fdumOLCXmMb9zn5P0v5uSvCIrbNR5tkiS3ohoCSb8QAvD_BwE&sku_id=12000025675682022\",\r\n    \"custom\": \"Marshallv4_Earpads\",\r\n    \"useFallback\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание ссылки с использованием опции custom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"long\":\"https://aliexpress.ru/item/1005003413165776.html?feed_id=20&_randl_currency=RUB&_randl_shipto=RU&sellermenu_hide=true&src=googleweb&albch=dspl&aff_short_key=brxT3bLh&isdl=y&aff_platform=jvru&utm_medium=cpc&utm_source=google&utm_campaign=JVRU_ALI_GOOGLE_WEB_UA_CROSS_CIS(GE)_PERFOMAX&gclid=CjwKCAjwl6OiBhA2EiwAuUwWZa7escVQDFZgUPmBK4fdumOLCXmMb9zn5P0v5uSvCIrbNR5tkiS3ohoCSb8QAvD_BwE&sku_id=12000025675682022\",\r\n    \"custom\": \"Marshallv4_Earpads\",\r\n    \"useFallback\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение длинной ссылки в виде текста",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gotiny.cc/api/Marshallv4_Earpads",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api",
+						"Marshallv4_Earpads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение длинной ссылки в виде json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gotiny.cc/api/Marshallv4_Earpads?format=json",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api",
+						"Marshallv4_Earpads"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
