@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "74cfccb1-fe03-4781-8dfc-e93a1915c989",
+		"name": "vika_avrusevich_homework_24",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28383059"
+	},
+	"item": [
+		{
+			"name": "Create a link without additional options",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"input\": \"https://teachmeskills.by/kursy-programmirovaniya\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a link with Custom options",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"input\": \"https://teachmeskills.by/kursy-programmirovaniya/\",\n    \"custom\": \"qa-avtomatizirovannoe-testirovanie-na-python-online\"\n}"
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a link with Custom and useFallback options",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"input\": \"https://teachmeskills.by/kursy-programmirovaniya/\",\n    \"custom\": \"qa-avtomatizirovannoe-testirovanie-na-python-online\",\n    \"useFallback\": \"true\"\n}"
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a long link as text",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://gotiny.cc/api/m4bhpr",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api",
+						"m4bhpr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a long link as json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://gotiny.cc/api/m4bhpr",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api",
+						"m4bhpr"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
