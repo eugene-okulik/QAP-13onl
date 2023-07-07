@@ -1,7 +1,10 @@
 import os
+from dotenv import load_dotenv
 
-login = os.getenv('S_LOGIN')
-password = os.getenv('S_PASSWORD')
+load_dotenv()
+
+login = os.getenv('D_LOGIN')
+password = os.getenv('D_PASSWORD')
 
 
 print(f'_Login: {login}')
