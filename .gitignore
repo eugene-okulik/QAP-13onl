@@ -5,3 +5,4 @@ venv
 .venv
 __pycache__
 lesson_sel.py
+credentials.py
